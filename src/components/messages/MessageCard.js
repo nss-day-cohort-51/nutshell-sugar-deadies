@@ -19,7 +19,7 @@ export const MessageCard = ({ message, handleDeleteMessage }) => {
         return (
 
             <section className="message">
-                <h3 className="messengerName">{message.message}</h3>
+                <h5 className="messengerName">{message.message}</h5>
                 <div>Posted by: {message.messenger} </div>
                 <div>{message.timestamp}</div>
             </section>
