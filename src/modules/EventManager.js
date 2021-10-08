@@ -1,4 +1,5 @@
 const remoteURL = "http://localhost:8088"
+const APIKey = "9f216fcc9206f98d20b2f1d761fb9674"
 
 export const getEventById = (eventId) => {
     return fetch(`${remoteURL}/events/${eventId}`)
@@ -25,3 +26,13 @@ export const addEvent = (newEvent) => {
         body: JSON.stringify(newEvent)
     }).then(response => response.json())
 }
+
+export const getWeather = () => {
+    return fetch(
+      `api.openweathermap.org/data/2.5/weather?q=London&appid={API key}`
+    )
+      .then((response) => response.json())
+      .then((parsedResponse) => {
+        return parsedResponse;
+      });
+  };
