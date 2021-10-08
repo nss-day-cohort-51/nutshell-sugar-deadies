@@ -11,7 +11,7 @@ export const FriendCard = ({ friend }) => {
         <>
             <section className="friend card">
                 <h3>{friend.user.name}</h3>
-                <div>{friend.currentUserId}</div>
+                <div>{friend.id}</div>
                 <button onClick={bruhbutton}>BRUH</button>
             </section>
         </>

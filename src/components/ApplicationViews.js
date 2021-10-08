@@ -1,6 +1,9 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { FriendList } from "./FriendsList"
+import { ArticleList } from "./articles/ArticleList"
+import { ArticleForm } from "./articles/ArticlesForm"
+
 
 export const ApplicationViews = () => {
   
@@ -8,8 +11,13 @@ export const ApplicationViews = () => {
     <>
 
       <Route exact path="/">
-        {/* Render the component for news articles */}
+        <ArticleList />
       </Route>
+
+      <Route  path="/create">
+        <ArticleForm />
+      </Route>
+
       <Route path="/friends">
         <FriendList />
       </Route>

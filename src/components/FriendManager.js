@@ -20,3 +20,9 @@ export const getAllFriends = () => {
     return fetch(`${URL}/friends?_expand=user`)
     .then(res => res.json())
   }
+
+  
+export const getAllUsers = () => {
+    return fetch(`${URL}/users`)
+    .then(res => res.json())
+  }

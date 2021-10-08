@@ -1,27 +1,27 @@
 import {useState, useEffect} from "react";
-import { getAllFriends } from "./FriendManager";
+import { getAllFriends, getAllUsers } from "./FriendManager";
 import { FriendCard } from "./Friend";
 
 export const FriendList = () => {
-	const [friends, setFriends] = useState([])
+	const [users, setUsers] = useState([])
 
-    const getFriends = () => {
-        return getAllFriends().then(res => {
+    const getUsers = () => {
+        return getAllUsers().then(res => {
             console.log(res)
-            setFriends(res)
+            setUsers(res)
         })
     };
     
 
     useEffect(() => {
         console.log("wababa")
-        getFriends();
+        getUsers();
     }, [])
 
     return (
         <>
         <h3>FRIENDS</h3>
-        {friends.map(friend => <FriendCard friend={friend} key={friend.id}/>)}
+        {users.map(user => <FriendCard user={user} key={user.id}/>)}
         </>
     )
 }
