@@ -13,3 +13,14 @@ export const FriendCard = ({ friend }) => {
         </>
     )
 }
+
+export const UserCard = ({user, handleAddFriend}) => {
+    return (
+    <>
+    <section>
+        <h3>{user.name}
+        <p>{user.id}</p></h3>
+        <button onClick={handleAddFriend}>Add Friend</button>
+    </section>
+    </>
+)}
