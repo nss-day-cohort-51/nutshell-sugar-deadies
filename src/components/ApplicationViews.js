@@ -1,6 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { Redirect } from "react-router"
+import { TaskForm } from "./task/TaskForm"
+import { TaskList } from "./task/TaskList"
 import { ArticleList } from "./articles/ArticleList"
 import { ArticleForm } from "./articles/ArticlesForm"
 import { MessageList } from "./messages/MessageList"
@@ -36,14 +37,19 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
       <Route path="/messages">
         <MessageList />
       </Route>
+      
+      <Route exact path="/tasks">
+        <TaskList />
+      </Route>
 
-      <Route path="/tasks">
-        {/* Render the component for the user's tasks */}
+      <Route path="/tasks/create">
+        <TaskForm />
       </Route>
 
       <Route path="/events">
         {/* Render the component for the user's events */}
       </Route>
+
     </>
   )
 }

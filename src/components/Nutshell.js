@@ -10,12 +10,12 @@ export const Nutshell = () => {
         const setAuthUser = (user) => {
           sessionStorage.setItem("nutshell_user", user.id)
           sessionStorage.setItem("nutshell_username", user.name)
-          setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+          setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
         }
 
         const clearUser = () => {
           sessionStorage.clear();
-          setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+          setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
         }
 
 
