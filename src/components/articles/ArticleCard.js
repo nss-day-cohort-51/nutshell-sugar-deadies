@@ -1,3 +1,5 @@
+// Author: Matt, Purpose: To format the way each article will show on the DOM
+
 import React from "react";
 
 
