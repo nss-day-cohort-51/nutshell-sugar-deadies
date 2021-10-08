@@ -35,9 +35,6 @@ export const TaskForm = () => {
 			addTask(task)
 				.then(() => history.push("/tasks"))
 		}
-	
-
-  
 
     return (
 
@@ -46,14 +43,14 @@ export const TaskForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name"></label>
-                    <input class="taskform" type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="task name" />
+                    <input className="taskform" type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="task name" />
                 </div>
             </fieldset>
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="name">Completion Date</label>
-                    <input class="taskform" type="datetime-local" id="name" onChange={handleControlledInputChange}className="form-control" placeholder="completion date" />
+                    <label htmlFor="completionDate">Completion Date</label>
+                    <input className="taskform" type="datetime-local" id="completionDate" onChange={handleControlledInputChange}className="form-control" placeholder="completion date" />
                 </div>
             </fieldset>
             <button className="btn btn-primary"
@@ -61,8 +58,6 @@ export const TaskForm = () => {
                 Save Task
             </button>
         </form>
-
-
 
     )
 }

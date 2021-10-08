@@ -1,16 +1,23 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { TaskCard } from "./task/TaskCard"
 import { TaskForm } from "./task/TaskForm"
 import { TaskList } from "./task/TaskList"
+import { ArticleList } from "./articles/ArticleList"
+import { ArticleForm } from "./articles/ArticlesForm"
+
 
 export const ApplicationViews = () => {
   return (
     <>
 
       <Route exact path="/">
-        {/* Render the component for news articles */}
+        <ArticleList />
       </Route>
+
+      <Route  path="/create">
+        <ArticleForm />
+      </Route>
+
       <Route path="/friends">
         {/* Render the component for list of friends */}
       </Route>
