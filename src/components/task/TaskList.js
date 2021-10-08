@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAllTasks } from "../../modules/TaskManager";
 import { TaskCard } from "./TaskCard";
 import { useHistory } from "react-router";
+import { deleteTask } from "../../modules/TaskManager";
 
 
 export const TaskList = () => {
@@ -10,21 +11,20 @@ export const TaskList = () => {
     const history = useHistory();
     const getTasks = () => {
 
-
-
-
-
         return getAllTasks().then(tasksFromAPI => {
             setTasks(tasksFromAPI)
 
         });
     };
 
-    // const handleDeleteTasks = id => {
-    //   deleteTask(id)
-    //     .then(() => getAllTasks().then(setTasks));
-    // };
+    const reload = () => {
+        getTasks()
+    }
 
+    const handleDeleteTask = id => {
+        deleteTask(id)
+            .then(() => getAllTasks().then(setTasks));
+    }
 
     useEffect(() => {
 
@@ -35,25 +35,25 @@ export const TaskList = () => {
     return (
 
         <>
+            
+
             <section className="section-content">
 
-             
+
                 <section>
-                    <div class="taskbutton">
-                        <button class="taskcreate-button" onClick={() => history.push("/tasks/create")}>Create a Task</button>
+                    <div className="taskbutton">
+                        <button className="taskcreate-button" onClick={() => history.push("/tasks/create")}>Create a Task</button>
                     </div>
                 </section>
 
 
             </section>
-
-
-
             <div className="container-cards">
                 {task.map(task =>
-                    <TaskCard
+                    <TaskCard reload={reload}
                         key={task.id}
-                        task={task} />)}
+                        task={task} handleDeleteTask={handleDeleteTask} />)}
+                        
             </div>
         </>
     );
