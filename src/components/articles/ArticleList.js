@@ -1,7 +1,9 @@
+// Author: Matt, Purpose: To portray the article cards in a list on the DOM
+
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { ArticleCard } from "./ArticleCard";
-import { getAllArticles, deleteArticle } from "./ArticleDataManager";
+import { getAllArticles, deleteArticle } from "../../modules/ArticleDataManager";
 
 export const ArticleList = () => {
     const [articles, setArticles] = useState([])
