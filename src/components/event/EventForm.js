@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import { addEvent } from '../../modules/EventManager';
 
 export const EventForm = () => {
+   
     const [interestingEvent, setEvent] = useState ({
         name: "",
         eventDate: "",

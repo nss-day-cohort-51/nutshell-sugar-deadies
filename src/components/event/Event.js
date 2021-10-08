@@ -33,8 +33,8 @@ export const EventList = () => {
         </button>
         </section>
         <div className="container-cards">
-            {events.map(event => <EventCard key={event.id} event={event} 
-            handleDeleteEvent={handleDeleteEvent} />)}
+            {events.map((event,index) => <EventCard key={event.id} event={event} 
+            handleDeleteEvent={handleDeleteEvent} index={index} />)}
         </div>
     </>
     )
