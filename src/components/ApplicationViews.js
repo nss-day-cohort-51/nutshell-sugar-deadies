@@ -10,6 +10,7 @@ import { ArticleForm } from "./articles/ArticlesForm"
 import { MessageList } from "./messages/MessageList"
 import { Login } from "./auth/Login"
 import {Register} from "./auth/Register"
+import { MessageEditForm } from "./messages/MessageEditForm"
 
 
 
@@ -38,8 +39,12 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         {/* Render the component for list of friends */}
       </Route>
 
-      <Route path="/messages">
+      <Route exact path="/messages">
         <MessageList />
+      </Route>
+
+      <Route exact path="/messages/:messageId(\d+)/edit">
+        <MessageEditForm />
       </Route>
       
       <Route exact path="/tasks">
