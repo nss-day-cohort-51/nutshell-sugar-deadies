@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { getMessageById, updateMessage } from "../../modules/MessageDataManager"
 import { useParams, useHistory } from "react-router"
-import { MessageCard } from "./MessageCard"
+
 
 export const MessageEditForm = () => {
     const [message, setMessage] = useState({ message: "" })
@@ -55,7 +55,7 @@ export const MessageEditForm = () => {
             <form>
                 <fieldset>
                     <label htmlFor="message">Update Message:</label>
-                    <input type="text" id="messageEdit" onChange={handleFieldChange} placeholder="Enter New Message" value={message.messages} />
+                    <input type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" value={message.messages} />
                 </fieldset>
 
                 <div >
@@ -65,4 +65,4 @@ export const MessageEditForm = () => {
             </form>
         </>
     )
-}
+} 
