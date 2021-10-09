@@ -84,10 +84,9 @@ export const Register = ({setAuthUser}) => {
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Sign in </button>
-                </fieldset>
-                <fieldset>
                     <button onClick={handleCancel}> Cancel </button>
                 </fieldset>
+               
             </form>
         </main>
     )

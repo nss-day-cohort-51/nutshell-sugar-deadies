@@ -16,6 +16,10 @@ export const MessageEditForm = () => {
         setMessage(stateToChange)
     }
 
+    const handleCancel = () => {
+        history.push("/messages")
+    }
+
     const updateExistingMessage = event => {
         event.preventDefault()
         setIsLoading(true)
@@ -51,11 +55,12 @@ export const MessageEditForm = () => {
             <form>
                 <fieldset>
                     <label htmlFor="message">Update Message:</label>
-                    <input type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" value={message.messages} />
+                    <input type="text" id="messageEdit" onChange={handleFieldChange} placeholder="Enter New Message" value={message.messages} />
                 </fieldset>
 
                 <div >
                     <button type="button" disabled={isLoading} onClick={updateExistingMessage}>Update</button>
+                    <button onClick={handleCancel}> Cancel </button>
                 </div>
             </form>
         </>

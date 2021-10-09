@@ -5,13 +5,20 @@ import { Link } from "react-router-dom"
 import { useHistory } from "react-router"
 import "bootstrap/dist/css/bootstrap.min.css"
 
+
 export const NavBar = ({ clearUser, isAuthenticated }) => {
 
   const history = useHistory()
 
   const handleLogout = () => {
-    history.push('/');
+    const retVal = window.confirm("Are you sure you want to Logout?")
+    
+    if(retVal == true){
+    history.push('/login');
     clearUser();
+    } else {
+      return false
+    }
   }
 
   return (
@@ -45,7 +52,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
           : null}
         {isAuthenticated ?
           <li className="nav-item" >
-            <Link className="nav-link" onClick={handleLogout} to="/login" >Logout</Link>
+            <Link className="nav-link" onClick={handleLogout} >Logout</Link>
           </li>
           : null}
       </ul>
