@@ -7,6 +7,11 @@ export const getAllArticles = () => {
     .then(res => res.json())
 }
 
+export const getArticleById = (articleId) => {
+    return fetch(`${remoteURL}/articles/${articleId}`)
+    .then(response => response.json())
+    }
+
 export const addArticle = (newArticle) => {
     return fetch(`${remoteURL}/articles`, {
         method: "POST",
@@ -22,4 +27,14 @@ export const deleteArticle = (id) => {
         method: "DELETE"
     }).then(result => result.json())
 
+}
+
+export const updateArticle = (articleObj) => {
+	return fetch(`${remoteURL}/articles/${articleObj.id}`, {
+		method: "PUT",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(articleObj)
+	}).then(data => data.json());
 }

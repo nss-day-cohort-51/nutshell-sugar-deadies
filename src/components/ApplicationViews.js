@@ -11,6 +11,7 @@ import { MessageList } from "./messages/MessageList"
 import { Login } from "./auth/Login"
 import {Register} from "./auth/Register"
 import { MessageEditForm } from "./messages/MessageEditForm"
+import { ArticleEditForm } from "./articles/ArticleEditForm"
 
 
 
@@ -25,6 +26,10 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
 
       <Route  path="/create">
         <ArticleForm />
+      </Route>
+
+      <Route exact path="/:articleId(\d+)/edit">
+        <ArticleEditForm/>
       </Route>
 
       <Route exact path="/login">
