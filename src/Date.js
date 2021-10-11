@@ -10,3 +10,4 @@ export const  formatAMPM = (date) => {
     var strTime = newDate + " " + hours + ':' + minutes + ' ' + ampm;
     return strTime;
 }
+
