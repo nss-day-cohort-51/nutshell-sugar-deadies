@@ -1,6 +1,7 @@
 import React from "react"
 import { useHistory } from "react-router-dom"
 import { completeTask, updateTask } from "../../modules/TaskManager";
+import { Link } from "react-router-dom";
 
 
 export const TaskCard = ({ task, reload, handleDeleteTask }) => {
@@ -26,6 +27,9 @@ export const TaskCard = ({ task, reload, handleDeleteTask }) => {
         onClick={() => history.push(`/tasks/${task.id}/edit`)}>
         Edit
     </button>
+    <Link to={`/tasks/${task.id}/edit`}>
+    
+  </Link>
    
    
 </section>

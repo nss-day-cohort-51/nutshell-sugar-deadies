@@ -14,11 +14,8 @@ import { Login } from "./auth/Login"
 import {Register} from "./auth/Register"
 import { MessageEditForm } from "./messages/MessageEditForm"
 import { ArticleEditForm } from "./articles/ArticleEditForm"
-<<<<<<< HEAD
 import { TaskEdit } from "./task/TaskEdit"
-=======
 import { WeatherCard } from "./event/WeatherCard"
->>>>>>> main
 
 
 

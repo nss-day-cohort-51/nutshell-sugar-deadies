@@ -60,11 +60,7 @@ export const TaskEdit = () => {
                         <label htmlFor="completionDate">Completion Date</label>
                     </div>
                     <div className="alignRight">
-                        <button
-                            type="button" disabled={isLoading}
-                            onClick={updateCompletedTask}
-                            className="btn btn-primary"
-                        >edit</button>
+                     
                     </div>
                     <div>
                         <button type="button" onClick={updateCompletedTask}>Update</button>
