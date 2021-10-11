@@ -14,6 +14,7 @@ import { Login } from "./auth/Login"
 import {Register} from "./auth/Register"
 import { MessageEditForm } from "./messages/MessageEditForm"
 import { ArticleEditForm } from "./articles/ArticleEditForm"
+import { TaskEdit } from "./task/TaskEdit"
 import { WeatherCard } from "./event/WeatherCard"
 
 
@@ -22,6 +23,8 @@ import { WeatherCard } from "./event/WeatherCard"
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
   return (
     <>
+      <Route exact path="/tasks/:taskId(\d+)/edit">
+        <TaskEdit /></Route>
 
       <Route exact path="/">
         {isAuthenticated ? <ArticleList /> : <Redirect to="/login" />}
