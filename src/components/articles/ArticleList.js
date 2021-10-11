@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { ArticleCard } from "./ArticleCard";
 import { getAllArticles, deleteArticle } from "../../modules/ArticleDataManager";
+import { CurrentWeatherCard } from "./MainWeatherCard";
+import "./Article.css"
 
 export const ArticleList = () => {
     const [articles, setArticles] = useState([])
@@ -20,7 +22,7 @@ export const ArticleList = () => {
 
     const handleDeleteArticle = id => {
         deleteArticle(id)
-        .then(() => getAllArticles().then(setArticles))
+            .then(() => getAllArticles().then(setArticles))
     }
 
     useEffect(() => {
@@ -32,18 +34,23 @@ export const ArticleList = () => {
 
     return (
         <>
-            <section >
-                <button type="button"
-                    onClick={() => { history.push("/create") }}>
-                    New Article
-                </button>
+            <section className="main-content">
+                <section className="main-weather">
+                    <CurrentWeatherCard />
+                </section>
+        <h2></h2>
+                <section className="articles">
+                <h2>Articles</h2>
+                    <button type="button"
+                        onClick={() => { history.push("/create") }}>
+                        New Article
+                    </button>
+                    <div className="article-cards">
+                        {articles.map(article => <ArticleCard article={article} key={article.id} handleDeleteArticle={handleDeleteArticle} />)}
+                    </div>
+                </section>
             </section>
 
-            <div className="article-cards">
-
-                {articles.map(article => <ArticleCard article={article} key={article.id} handleDeleteArticle={handleDeleteArticle} />)}
-
-            </div>
         </>
     )
 

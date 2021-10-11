@@ -4,6 +4,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { useHistory } from "react-router"
 import "bootstrap/dist/css/bootstrap.min.css"
+import "./NavBar.css"
 
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
@@ -22,7 +23,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
   }
 
   return (
-    <nav className="navbar bg-dark text-white flex-md-nowrap p-0 shadow">
+    <nav className="navbar">
 
       <ul className="nav nav-pills nav-fill">
         {isAuthenticated ?
@@ -52,7 +53,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
           : null}
         {isAuthenticated ?
           <li className="nav-item" >
-            <Link className="nav-link" to="/login" onClick={handleLogout} >Logout</Link>
+            <Link className="nav-link" onClick={handleLogout} to="/login" >Logout</Link>
           </li>
           : null}
       </ul>
