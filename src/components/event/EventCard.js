@@ -1,5 +1,6 @@
 import React from "react";
 import "./Event.css"
+import { Link } from "react-router-dom"
 import { useHistory } from "react-router";
 
 
@@ -21,6 +22,9 @@ export const EventCard = ({ event, handleDeleteEvent, index }) => {
                         onClick={() => { history.push("/weather") }}>
                         Show Weather
                     </button>
+                    <Link to={`/events/${event.id}/edit`}>
+                        <button>Edit</button>
+                    </Link>
                 </>
 
                 : <> <h3 className="event__name">{event.name}</h3>
@@ -33,6 +37,9 @@ export const EventCard = ({ event, handleDeleteEvent, index }) => {
                         onClick={() => { history.push("/weather") }}>
                         Show Weather
                     </button>
+                    <Link to={`/events/${event.id}/edit`}>
+                        <button>Edit</button>
+                    </Link>
                 </>}
         </section>
     )
