@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
-import { getAllFriends, getAllUsers } from "./FriendManager";
+import { addFriend, deleteFriend, getAllFriends, getAllUsers } from "./FriendManager";
 import { FriendCard, UserCard } from "./Friend";
+import { AddNewFriend } from "./AddNewFriend";
 
 export const FriendList = () => {
 
@@ -26,8 +27,20 @@ export const FriendList = () => {
         })
     };
 
-    const handleAddFriend = (user) => {
-        return console.log(user);
+    const handleRemoveFriend = (friendid) => {
+        deleteFriend(friendid).then(res=> (
+            getFriends()
+        ))
+    }
+    
+    const handleAddFriend = (userid) => {
+        const newFriend = {
+            userId: userid,
+            currentUserId: user
+        }
+        console.log(userid)
+        addFriend(newFriend).then(res =>
+            getFriends())
     }
 
     useEffect(() => {
@@ -38,10 +51,13 @@ export const FriendList = () => {
     return (
         <>
         <h3>FRIENDS</h3>
-        {friends.filter(friend => friend.currentUserId === user).map(friend => <FriendCard friend={friend} key={friend.id}/>)}
+        {friends.filter(friend => friend.currentUserId === user).map(friend => 
+            <FriendCard friend={friend} key={friend.id} handleRemoveFriend={handleRemoveFriend}/>)
+        }
         <h3>USERS</h3>
-        {users.filter(user => user.id === user.id).map(user=> <UserCard user={user} key={user.id}/>)}
-
+        {users.filter(user => user.id === user.id).map(user=> 
+            <UserCard user={user} key={user.id} handleAddFriend={handleAddFriend}/>)
+        }
         </>
     )
 }

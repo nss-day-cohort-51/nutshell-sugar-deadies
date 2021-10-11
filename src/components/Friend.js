@@ -1,15 +1,10 @@
-export const FriendCard = ({ friend }) => {
-
-    const bruhbutton = (friend) => {
-        return console.log(friend.id)
-    }
-
+export const FriendCard = ({ friend, handleRemoveFriend }) => {
     return (
         <>
-            <section className="friend card">
-                <h3>{friend.user.name}</h3>
-                <button onClick={bruhbutton}>BRUH</button>
-            </section>
+        <section>
+            <h3>{friend.user.name}</h3>
+            <button onClick={() => handleRemoveFriend(friend.id)}>Remove Friend</button>
+        </section>
         </>
     )
 }
@@ -20,7 +15,7 @@ export const UserCard = ({user, handleAddFriend}) => {
     <section>
         <h3>{user.name}
         <p>{user.id}</p></h3>
-        <button onClick={handleAddFriend}>Add Friend</button>
+        <button onClick={() => handleAddFriend(user.id)}>Add Friend</button>
     </section>
     </>
 )}
