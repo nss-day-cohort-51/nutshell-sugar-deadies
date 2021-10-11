@@ -1,0 +1,17 @@
+.messageForm {
+    font-family: "Beatles", sans-serif; 
+    word-spacing: 10px;
+    border: 10px solid black;
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.message-cards {
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+}
+
+.message-form-container {
+    display: flex;
+    justify-content: center;
+}

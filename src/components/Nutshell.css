@@ -1,3 +1,15 @@
 strong {
   font-weight: bold;
 }
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 10px;
+}

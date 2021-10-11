@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react"
 import { getArticleById, updateArticle } from "../../modules/ArticleDataManager"
 import { useParams, useHistory } from "react-router"
+import "./Article.css"
 
 export const ArticleEditForm = () => {
     const [article, setArticle] = useState({ title: "", synopsis: "", url: "" })
@@ -48,7 +49,7 @@ export const ArticleEditForm = () => {
 
     return (
         <>
-
+            <section className="articleForm">
             <section>
                 <h3 className="articleTitle">{article.title} </h3>
                 <div>{article.synopsis}</div>
@@ -79,6 +80,7 @@ export const ArticleEditForm = () => {
                     </div>
                 </fieldset>
             </form>
+            </section>
         </>
     )
 }
