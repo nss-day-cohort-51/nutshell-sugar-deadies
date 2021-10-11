@@ -1,3 +1,5 @@
+//Author: Matt, Purpose: To allow the user to edit an Article
+
 import React, { useState, useEffect } from "react"
 import { getArticleById, updateArticle } from "../../modules/ArticleDataManager"
 import { useParams, useHistory } from "react-router"
