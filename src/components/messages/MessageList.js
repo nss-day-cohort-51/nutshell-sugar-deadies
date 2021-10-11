@@ -6,10 +6,13 @@ import { getAllMessages } from "../../modules/MessageDataManager"
 import { addMessage, deleteMessage } from "../../modules/MessageDataManager";
 import { formatAMPM } from "../../Date";
 import "./Message.css"
+import { AddFriendModal } from "../AddNewFriend";
 
 export const MessageList = () => {
     let user = parseInt(sessionStorage.getItem("nutshell_user"))
     const messenger = sessionStorage.getItem("nutshell_username")
+
+    const [show, setShow] = useState(false)
 
     const [messages, setMessages] = useState([])
 
@@ -27,6 +30,9 @@ export const MessageList = () => {
         })
     }
     
+    const showModal = () => {
+        return setShow(true)
+    }
 
     const handleDeleteMessage = id => {
         deleteMessage(id)
@@ -77,8 +83,9 @@ export const MessageList = () => {
             
 
             <div className="message-cards">
-            <h2>Chat</h2>
-                {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} />)}
+                <h2>Chat</h2>
+                {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} showModal={showModal}/>)}
+                <AddFriendModal show={show} />
             </div>
         </>
     )
