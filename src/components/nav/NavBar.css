@@ -1,4 +1,10 @@
 .navbar {
+    display: flex;
+    justify-content: center;
     font-family: "Beatles", sans-serif;
-    background-color: black;
+    background-color: black; 
+}
+
+a.nav-link {
+    color: white;
 }

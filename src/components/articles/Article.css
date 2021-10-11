@@ -11,3 +11,15 @@
     word-spacing: 10px;
   }
 
+  h1 {
+      text-align: center;
+  }
+
+  .articleButton {
+      margin-bottom: 10px;
+      word-spacing: 4px;
+  }
+
+  h3.articleTitle {
+    margin-top: 10px;
+}
