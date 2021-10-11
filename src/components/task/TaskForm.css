@@ -6,3 +6,8 @@
     box-sizing: border-box;
     background-color: lightcoral;
 }
+
+.btn-primary {
+
+    color: red;
+}
