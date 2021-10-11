@@ -6,7 +6,7 @@ export const EventForm = () => {
    
     const [interestingEvent, setEvent] = useState ({
         name: "",
-        eventDate: "",
+        date: "",
         location: ""
 
     })
