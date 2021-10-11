@@ -5,6 +5,7 @@ import { MessageCard } from "./MessageCard";
 import { getAllMessages } from "../../modules/MessageDataManager"
 import { addMessage, deleteMessage } from "../../modules/MessageDataManager";
 import { formatAMPM } from "../../Date";
+import "./Message.css"
 
 export const MessageList = () => {
     let user = parseInt(sessionStorage.getItem("nutshell_user"))
@@ -58,11 +59,12 @@ export const MessageList = () => {
 
     return (
         <>
-            <form className="messageForm">
-                <fieldset>
+        <div className="message-form-container">
+            <form >
+                <fieldset className="messageForm">
                     <div>
-                        <label htmlFor="message">Enter New Message:</label>
-                        <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message" value={message.messages} />
+                        <label htmlFor="message">Enter New Message: </label>
+                        <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message" size="50" value={message.messages} />
                     </div>
                     <button
                         onClick={handleClickSaveMessage}>
@@ -70,10 +72,12 @@ export const MessageList = () => {
                     </button>
                 </fieldset>
             </form>
+            </div>
 
-            <h2>Chat</h2>
+            
 
             <div className="message-cards">
+            <h2>Chat</h2>
                 {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} />)}
             </div>
         </>

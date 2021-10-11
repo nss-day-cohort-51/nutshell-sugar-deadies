@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { getMessageById, updateMessage } from "../../modules/MessageDataManager"
 import { useParams, useHistory } from "react-router"
-
+import "./Message.css"
 
 export const MessageEditForm = () => {
     const [message, setMessage] = useState({ message: "" })
