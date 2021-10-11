@@ -38,13 +38,16 @@ export const ArticleList = () => {
                 <section className="main-weather">
                     <CurrentWeatherCard />
                 </section>
-        <h2></h2>
-                <section className="articles">
-                <h2>Articles</h2>
-                    <button type="button"
+
+                <div className="artTitle">
+                <h1>Articles</h1>
+                    <button className="articleButton" type="button"
                         onClick={() => { history.push("/create") }}>
-                        New Article
+                        Add New Article
                     </button>
+                </div>
+ 
+                <section className="articles">
                     <div className="article-cards">
                         {articles.map(article => <ArticleCard article={article} key={article.id} handleDeleteArticle={handleDeleteArticle} />)}
                     </div>

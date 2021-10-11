@@ -1,3 +1,4 @@
+//Author: Matt, Purpose: To give the user the ability to edit
 import React, { useState, useEffect } from "react"
 import { getMessageById, updateMessage } from "../../modules/MessageDataManager"
 import { useParams, useHistory } from "react-router"
@@ -52,10 +53,10 @@ export const MessageEditForm = () => {
                 <div>{message.timestamp}</div>
             </section>
 
-            <form>
+            <form className="message">
                 <fieldset>
                     <label htmlFor="message">Update Message:</label>
-                    <input type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" value={message.message} />
+                    <input type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" size= "20" value={message.message} />
                 </fieldset>
 
                 <div >

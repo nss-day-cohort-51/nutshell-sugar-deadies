@@ -8,6 +8,7 @@ export const ArticleCard = ({ article, handleDeleteArticle }) => {
     const history = useHistory()
 
     return (
+        <>
         <section className="article">
             <h3 className="articleTitle">{article.title} </h3>
             <div>{article.synopsis}</div>
@@ -19,5 +20,7 @@ export const ArticleCard = ({ article, handleDeleteArticle }) => {
                         Edit
                     </button>
         </section>
+        <hr></hr>
+        </>
     )
 }

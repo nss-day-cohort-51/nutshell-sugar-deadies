@@ -2,14 +2,27 @@ strong {
   font-weight: bold;
 }
 
+html {
+ margin: 0
+
+}
+
 label {
   margin-right: 10px;
 }
 
 input {
   margin-bottom: 10px;
+  word-spacing: 3px;
+  
 }
 
 button {
   margin-right: 10px;
+
+}
+
+button:hover {
+  background-color: lightgrey;
+  transition-duration: 0.25s;
 }
