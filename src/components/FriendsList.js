@@ -5,7 +5,7 @@ import { AddNewFriend } from "./AddNewFriend";
 
 export const FriendList = () => {
 
-    const user = parseInt(sessionStorage.getItem("nutshell_user"))
+    const loguser = parseInt(sessionStorage.getItem("nutshell_user"))
 
 	const [friends, setFriends] = useState([])
     const [users, setUsers] = useState([])
@@ -36,7 +36,7 @@ export const FriendList = () => {
     const handleAddFriend = (userid) => {
         const newFriend = {
             userId: userid,
-            currentUserId: user
+            currentUserId: loguser
         }
         console.log(userid)
         addFriend(newFriend).then(res =>
@@ -51,11 +51,11 @@ export const FriendList = () => {
     return (
         <>
         <h3>FRIENDS</h3>
-        {friends.filter(friend => friend.currentUserId === user).map(friend => 
+        {friends.filter(friend => friend.currentUserId === loguser).map(friend => 
             <FriendCard friend={friend} key={friend.id} handleRemoveFriend={handleRemoveFriend}/>)
         }
         <h3>USERS</h3>
-        {users.filter(user => user.id === user.id).map(user=> 
+        {users.filter(user => user.id !== loguser && !(friends.find(friend => user.id === friend.userId))).map(user=> 
             <UserCard user={user} key={user.id} handleAddFriend={handleAddFriend}/>)
         }
         </>

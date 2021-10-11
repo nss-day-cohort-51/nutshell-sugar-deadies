@@ -2,3 +2,8 @@
   min-width: 15rem;
   min-height: 5rem;
 }
+
+.container--login {
+  font-family: "Beatles", sans-serif;
+  word-spacing: 5px;
+}

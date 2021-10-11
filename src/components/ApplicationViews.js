@@ -3,6 +3,8 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { FriendList } from "./FriendsList"
+import { EventList } from "./event/Event"
+import { EventForm } from "./event/EventForm"
 import { Redirect } from "react-router"
 import { TaskForm } from "./task/TaskForm"
 import { TaskList } from "./task/TaskList"
@@ -13,11 +15,15 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { MessageEditForm } from "./messages/MessageEditForm"
 import { ArticleEditForm } from "./articles/ArticleEditForm"
-
+import { TaskEdit } from "./task/TaskEdit"
+import { WeatherCard } from "./event/WeatherCard"
+import { EventEditForm } from "./event/EventEditForm"
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
   return (
     <>
+      <Route exact path="/tasks/:taskId(\d+)/edit">
+        <TaskEdit /></Route>
 
       <Route exact path="/">
         {isAuthenticated ? <ArticleList /> : <Redirect to="/login" />}
@@ -50,6 +56,25 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
       <Route exact path="/messages/:messageId(\d+)/edit">
         <MessageEditForm />
       </Route>
+      <Route path="/tasks">
+
+      </Route>
+
+      <Route exact path="/events">
+        <EventList />
+      </Route>
+
+      <Route path="/events/create">
+        <EventForm />
+      </Route>
+
+      <Route exact path="/events/:eventId(\d+)/edit">
+        <EventEditForm />
+      </Route>
+
+      <Route exact path="/weather">
+        <WeatherCard />
+      </Route>
 
       <Route exact path="/tasks">
         <TaskList />
@@ -57,10 +82,6 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
 
       <Route path="/tasks/create">
         <TaskForm />
-      </Route>
-
-      <Route path="/events">
-        {/* Render the component for the user's events */}
       </Route>
 
     </>

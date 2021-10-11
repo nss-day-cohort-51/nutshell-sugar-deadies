@@ -1,0 +1,13 @@
+.main-content{
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .articleForm {
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+  }
+
