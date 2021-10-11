@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import "./Login.css"
 
-export const Register = () => {
+export const Register = ({setAuthUser}) => {
 
     const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "" })
     const [conflictDialog, setConflictDialog] = useState(false)
@@ -21,6 +21,10 @@ export const Register = () => {
         return fetch(`http://localhost:8088/users?email=${registerUser.email}`)
             .then(res => res.json())
             .then(user => !!user.length)
+    }
+
+    const handleCancel = () => {
+        history.push("/login")
     }
 
     const handleRegister = (e) => {
@@ -44,7 +48,7 @@ export const Register = () => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 // The user id is saved under the key nutshell_user in session Storage. Change below if needed!
-                                sessionStorage.setItem("nutshell_user", createdUser.id)
+                                setAuthUser(createdUser)
                                 history.push("/")
                             }
                         })
@@ -80,7 +84,9 @@ export const Register = () => {
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Sign in </button>
+                    <button onClick={handleCancel}> Cancel </button>
                 </fieldset>
+               
             </form>
         </main>
     )
