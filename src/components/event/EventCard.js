@@ -18,7 +18,7 @@ export const EventCard = ({ event, handleDeleteEvent, index }) => {
                     <button type="button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
                     <button type="button"
                         className="btn"
-                        onClick={() => { history.push("weather") }}>
+                        onClick={() => { history.push("/weather") }}>
                         Show Weather
                     </button>
                 </>
@@ -30,7 +30,7 @@ export const EventCard = ({ event, handleDeleteEvent, index }) => {
                     <button type="button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
                     <button type="button"
                         className="btn"
-                        onClick={() => { history.push("weather") }}>
+                        onClick={() => { history.push("/weather") }}>
                         Show Weather
                     </button>
                 </>}

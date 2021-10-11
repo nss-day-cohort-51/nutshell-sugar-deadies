@@ -14,6 +14,7 @@ import { Login } from "./auth/Login"
 import {Register} from "./auth/Register"
 import { MessageEditForm } from "./messages/MessageEditForm"
 import { ArticleEditForm } from "./articles/ArticleEditForm"
+import { WeatherCard } from "./event/WeatherCard"
 
 
 
@@ -64,7 +65,9 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
         <EventForm />
       </Route>
 
-
+      <Route exact path="/weather">
+        <WeatherCard />
+      </Route>
       
       <Route exact path="/tasks">
         <TaskList />
