@@ -41,10 +41,12 @@ export const ArticleList = () => {
 
                 <div className="artTitle">
                 <h1>Articles</h1>
-                    <button className="articleButton" type="button"
-                        onClick={() => { history.push("/create") }}>
-                        Add New Article
-                    </button>
+                    <div className="art-button-move">
+                        <button className="articleButton" type="button"
+                            onClick={() => { history.push("/create") }}>
+                            Add New Article
+                        </button>
+                    </div>
                 </div>
  
                 <section className="articles">

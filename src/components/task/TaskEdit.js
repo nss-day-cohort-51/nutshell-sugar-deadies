@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { getTaskById, updateTask } from "../../modules/TaskManager"
 import { useParams, useHistory } from "react-router"
+import "./Task.css"
 
 export const TaskEdit = () => {
     const [task, setTask] = useState({ name: "", completionDate: "" });
