@@ -1,3 +1,5 @@
+// Author: Morgan, Purpose: To portray the event cards in a list on the DOM
+
 import React, {useState, useEffect} from 'react';
 import { getAllEvents, deleteEvent } from '../../modules/EventManager';
 import { EventCard } from './EventCard';
@@ -26,12 +28,17 @@ export const EventList = () => {
     return (
         <>
         <section className="section-content">
-        <button type="button"
-        className="btn"
+
+         <section>
+        <h1>Events</h1>
+        <div className="eventbutton">
+        <button className="eventcreate-button"
         onClick={() => {history.push("events/create")}}>
-            Add Event
-        </button>
+            Add Event</button>
+        </div>
         </section>
+        
+        </section>   
         <div className="container-cards">
             {events.map((event,index) => <EventCard key={event.id} event={event} 
             handleDeleteEvent={handleDeleteEvent} index={index} />)}
