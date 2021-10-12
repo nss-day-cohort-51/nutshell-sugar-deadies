@@ -7,22 +7,30 @@ import { getAllMessages } from "../../modules/MessageDataManager"
 import { addMessage, deleteMessage } from "../../modules/MessageDataManager";
 import { formatAMPM } from "../../Date";
 import "./Message.css"
+import { AddFriendModal } from "../AddNewFriend";
+import { getAllFriends, addFriend } from "../FriendManager";
 
 export const MessageList = () => {
     let user = parseInt(sessionStorage.getItem("nutshell_user"))
     const messenger = sessionStorage.getItem("nutshell_username")
+    let loguser = parseInt(sessionStorage.getItem("nutshell_user"))
+
+    const [friends, setFriends] = useState([])
+
+    const [targetUser, setTargetuser] = useState({})
+
+    const [show, setShow] = useState(false)
 
     const history = useHistory()
 
     const [messages, setMessages] = useState([])
 
     const [message, setMessage] = useState({
-        currentUserId: user,
+        userId: user,
         messenger: messenger,
         message: "",
         timestamp: formatAMPM(new Date)
     })
-
 
     const getMessages = () => {
         return getAllMessages().then(response => {
@@ -30,6 +38,26 @@ export const MessageList = () => {
         })
     }
 
+    const getFriends = () => {
+        return getAllFriends().then(res => {
+            setFriends(res)
+        })
+    };
+
+    const handleAddFriend = (userid) => {
+        const newFriend = {
+            userId: userid,
+            currentUserId: loguser
+        }
+        addFriend(newFriend).then(res =>
+            getFriends())
+            setShow(false)
+    }
+    
+    const showModal = (user) => {
+        setTargetuser(user)
+        setShow(true)
+    }
 
     const handleDeleteMessage = id => {
         deleteMessage(id)
@@ -38,6 +66,7 @@ export const MessageList = () => {
 
     useEffect(() => {
         getMessages()
+        getFriends()
     }, [])
 
 
@@ -68,8 +97,7 @@ export const MessageList = () => {
             })
 
     }
-
-
+    
 
     return (
         <>
@@ -89,7 +117,10 @@ export const MessageList = () => {
 
             <div className="message-cards">
                 <h1>Chat</h1>
-                {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} />)}
+                {
+                    show ? <AddFriendModal show={show} setShow={setShow} message={targetUser} handleAddFriend={handleAddFriend}/> : ""
+                }
+                {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} showModal={showModal}/>)}
             </div>
         </>
     )
