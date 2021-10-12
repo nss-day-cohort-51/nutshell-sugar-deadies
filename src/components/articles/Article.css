@@ -9,5 +9,102 @@
   .articleForm {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
+    
   }
 
+ 
+
+  h1 {
+      text-align: center;
+      
+  }
+
+  .article {
+    margin-left: 20px;
+    
+  }
+
+  .art-button-move {
+      display: flex;
+      justify-content: center;
+  }
+
+  
+  
+
+  .articleButton {
+    margin-bottom: 60px;
+    word-spacing: 4px;
+    width: 200px;
+    height: 50px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    /* border-color: white; */
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 20px;
+    transition-duration: 0.4s;  
+    
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    margin-top: 20px;
+    
+  }
+
+  h3.articleTitle {
+    /* margin-top: 10px; */
+    
+}
+
+.article-delete-edit {
+    width: 100px;
+    height: 35px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    /* border-color: white; */
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    margin-right: 20px;
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    margin-top: 20px;
+
+
+}
+
+article {
+
+margin-left: 20px;
+}
+
+.weatherCard {
+
+  display: flex;
+  font-size: x-small;
+  
+  margin-top: 20px;
+  margin-left: 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+  /* background-color: lightskyblue;
+  max-width: fit-content;
+  border-radius: 20px;
+  border-style: groove; */
+}
+span {
+  padding: 20px;
+}
+p {
+  padding: 20px;
+}
+h4 {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: xx-small;
+}

@@ -3,6 +3,7 @@ import { getAllTasks } from "../../modules/TaskManager";
 import { TaskCard } from "./TaskCard";
 import { useHistory } from "react-router";
 import { deleteTask } from "../../modules/TaskManager";
+import "./Task.css"
 
 
 export const TaskList = () => {
@@ -41,6 +42,7 @@ export const TaskList = () => {
 
 
                 <section>
+                <h1>Tasks</h1>
                     <div className="taskbutton">
                         <button className="taskcreate-button" onClick={() => history.push("/tasks/create")}>Create a Task</button>
                     </div>

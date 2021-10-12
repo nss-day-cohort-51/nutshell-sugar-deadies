@@ -6,6 +6,12 @@
     width: fit-content;
 }
 
+.message {
+    margin-bottom: 20px; 
+    font-family: "Beatles", sans-serif; 
+    word-spacing: 10px;
+}
+
 .message-cards {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
@@ -15,3 +21,4 @@
     display: flex;
     justify-content: center;
 }
+

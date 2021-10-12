@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { MessageCard } from "./MessageCard";
+import { useHistory } from "react-router";
 import { getAllMessages } from "../../modules/MessageDataManager"
 import { addMessage, deleteMessage } from "../../modules/MessageDataManager";
 import { formatAMPM } from "../../Date";
@@ -19,6 +20,8 @@ export const MessageList = () => {
     const [targetUser, setTargetuser] = useState({})
 
     const [show, setShow] = useState(false)
+
+    const history = useHistory()
 
     const [messages, setMessages] = useState([])
 
@@ -58,13 +61,15 @@ export const MessageList = () => {
 
     const handleDeleteMessage = id => {
         deleteMessage(id)
-        .then(() => getAllMessages().then(setMessages))
+            .then(() => getAllMessages().then(setMessages))
     }
 
     useEffect(() => {
         getMessages()
         getFriends()
     }, [])
+
+
 
     const handleControlledInputChange = (event) => {
         const newMessage = { ...message }
@@ -77,35 +82,41 @@ export const MessageList = () => {
         setMessage(newMessage)
     }
 
-    const handleClickSaveMessage = (event) => {
+    const handleClickSaveNewMessage = (event) => {
         event.preventDefault()
-            //window.reload is not goooood. use push or history or set state to force react to re-render
+        console.log("save")
         addMessage(message)
-            .then(() => getMessages())
+            .then(() => {
+                setMessage({
+                    currentUserId: user,
+                    messenger: messenger,
+                    message: "",
+                    timestamp: formatAMPM(new Date)
+                })
+                getMessages()
+            })
+
     }
     
 
     return (
         <>
-        <div className="message-form-container">
-            <form >
-                <fieldset className="messageForm">
-                    <div>
-                        <label htmlFor="message">Enter New Message: </label>
-                        <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message" size="50" value={message.messages} />
-                    </div>
-                    <button
-                        onClick={handleClickSaveMessage}>
-                        Save
-                    </button>
-                </fieldset>
-            </form>
+            <div className="message-form-container">
+                <form >
+                    <fieldset className="messageForm">
+                        <div>
+                            <label htmlFor="message">Enter New Message: </label>
+                            <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message" size="50" value={message.message} />
+                        </div>
+                        <button onClick={handleClickSaveNewMessage}>Save</button>
+                    </fieldset>
+                </form>
             </div>
 
-            
+
 
             <div className="message-cards">
-                <h2>Chat</h2>
+                <h1>Chat</h1>
                 {
                     show ? <AddFriendModal show={show} setShow={setShow} message={targetUser} handleAddFriend={handleAddFriend}/> : ""
                 }

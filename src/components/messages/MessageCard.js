@@ -18,6 +18,7 @@ export const MessageCard = ({ message, handleDeleteMessage, showModal }) => {
                         onClick={() => history.push(`/messages/${message.id}/edit`)}>
                         Edit
                     </button>
+                    <hr></hr>
                 </section>
 
             </>
