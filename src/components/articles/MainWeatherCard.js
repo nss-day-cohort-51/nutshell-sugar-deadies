@@ -16,13 +16,15 @@ export const CurrentWeatherCard = () => {
 
     return (
         <section className="weatherCard">
-            <h3 >Todays Weather</h3>
+            <p >Nashville, TN</p>
 
             {weather.main &&
                 <>
                     <span>Temp: {Math.round(weather.main.temp)}</span>
-                    <p>Description: {weather.weather[0].description}</p>
+                    <p>{weather.weather[0].description}</p>
+                    <div className="icon">
                     <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
+                    </div>
                 </>
             }
 

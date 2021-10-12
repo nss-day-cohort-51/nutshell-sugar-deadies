@@ -23,6 +23,13 @@ button {
 }
 
 button:hover {
-  background-color: lightgrey;
+  background-color:lightsteelblue;
   transition-duration: 0.25s;
+}
+
+h1 {
+
+  font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    margin-top: 10px;
 }

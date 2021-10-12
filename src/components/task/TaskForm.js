@@ -2,6 +2,7 @@ import React from "react"
 import { useState } from "react";
 import { useHistory } from "react-router";
 import { addTask } from "../../modules/TaskManager";
+import "./Task.css"
 
 
 export const TaskForm = () => {
@@ -41,21 +42,21 @@ export const TaskForm = () => {
     return (
 
         <form className="taskForm">
-            <h2 className="taskForm__title">Creat a new task</h2>
-            <fieldset>
+            <h2 className="taskForm__title">Create a new task</h2>
+            <fieldset className="taskform-fieldset">
                 <div className="form-group">
                     <label htmlFor="name"></label>
-                    <input className="taskform" type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="task name" />
+                    <input type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="task name" />
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset className="taskform-fieldset">
                 <div className="form-group">
                     <label htmlFor="completionDate">Completion Date</label>
-                    <input className="taskform" type="datetime-local" id="completionDate" onChange={handleControlledInputChange}className="form-control" placeholder="completion date" />
+                    <input type="datetime-local" id="completionDate" onChange={handleControlledInputChange}className="form-control" placeholder="completion date" />
                 </div>
             </fieldset>
-            <button className="btn btn-primary"
+            <button className="save-button-task"
                 onClick={handleClickSaveTask}>
                 Save Task
             </button>
