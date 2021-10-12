@@ -64,7 +64,7 @@ export const TaskEdit = () => {
                      
                     </div>
                     <div>
-                        <button type="button" onClick={updateCompletedTask}>Update</button>
+                        <button type="button" onClick={updateCompletedTask} disabled={isLoading}>Update</button>
                     </div>
                 </fieldset>
             </form>

@@ -1,6 +1,6 @@
 // Author: Matt, Purpose: To format the way each message will show on the DOM
 import "./Message.css"
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router";
 
 export const MessageCard = ({ message, handleDeleteMessage, showModal }) => {

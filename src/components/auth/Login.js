@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import { Link, useHistory } from "react-router-dom";
 import "./Login.css"
 
@@ -30,7 +30,7 @@ export const Login = ({setAuthUser}) => {
             .then(exists => {
                 if (exists) {
                     // The user id is saved under the key nutshell_user in session Storage. Change below if needed!
-                    setAuthUser(exists)
+                    setAuthUser(exists) 
                     history.push("/")
                 } else {
                     setExistDialog(true)

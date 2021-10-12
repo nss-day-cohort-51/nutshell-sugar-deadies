@@ -1,8 +1,8 @@
 // Author: Matt, Purpose: To format the way each article will show on the DOM
 
-import userEvent from "@testing-library/user-event";
-import React, { useImperativeHandle } from "react";
-import { useHistory, useParams } from "react-router";
+
+import React from "react";
+import { useHistory } from "react-router";
 import "./Article.css"
 
 export const ArticleCard = ({ article, handleDeleteArticle }) => {
