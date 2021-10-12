@@ -88,7 +88,7 @@ export const MessageList = () => {
         addMessage(message)
             .then(() => {
                 setMessage({
-                    currentUserId: user,
+                    userId: user,
                     messenger: messenger,
                     message: "",
                     timestamp: formatAMPM(new Date)
@@ -99,33 +99,36 @@ export const MessageList = () => {
     }
 
 
+
+
     return (
         <>
-        <h1>Messages</h1>
-        <div >
-            <form >
-                <fieldset className="messageForm">
-                    <div>
-                        <label htmlFor="message"> </label>
-                        <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat" size="50" value={message.messages} />
-                    </div>
-                    <button className="message-save-button"
-                        onClick={handleClickSaveNewMessage}>
-                        Save
-                    </button>
-                </fieldset>
-            </form>
+            <h1>Messages</h1>
+            <div >
+                <form >
+                    <fieldset className="messageForm">
+                        <div>
+                            <label htmlFor="message"> </label>
+                            <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat" size="50" value={message.message} />
+                        </div>
+                        <button className="message-save-button"
+                            onClick={handleClickSaveNewMessage}>
+                            Save
+                        </button>
+                    </fieldset>
+                </form>
             </div>
-            <h2 className="chat-header">Chat</h2>
-           
-
+            <h1>Chat</h1>
+            {
+                show ? <AddFriendModal show={show} setShow={setShow} message={targetUser} handleAddFriend={handleAddFriend} /> : ""
+            }
             <div className="message-cards">
-            <hr></hr>
-            
-                {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} />)}
+                <hr></hr>
+
+                {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} showModal={showModal}/>)}
             </div>
-            
-           
+
+
         </>
     )
 }

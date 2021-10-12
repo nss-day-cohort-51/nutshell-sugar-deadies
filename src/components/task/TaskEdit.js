@@ -50,7 +50,7 @@ export const TaskEdit = () => {
                 <fieldset>
                     <div className="edit-form-container">
                         <div className="formgrid">
-                        <label htmlFor="name">Task</label>
+                            <label htmlFor="name">Task</label>
                             <input
                                 type="text"
                                 required
@@ -65,6 +65,10 @@ export const TaskEdit = () => {
                             <div>
 
                                 <button className="task-update-button" type="button" onClick={updateCompletedTask}>Update</button>
+                                <button className="task-update-button"
+                                    onClick={handleCancelButton}>
+                                    Cancel
+                                </button>
                             </div>
                         </div>
                         <div className="alignRight">
