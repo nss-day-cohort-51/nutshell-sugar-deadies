@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:8088"
 
 export const getAllMessages = () => {
-   return fetch(`${remoteURL}/messages`)
+   return fetch(`http://localhost:8088/messages?_expand=user`)
     .then(response => response.json())
 }
 
