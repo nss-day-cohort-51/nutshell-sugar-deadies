@@ -1,6 +1,6 @@
 //Author: Matt, Purpose: To not allow access to user if they are not logged in
 
-import React from "react"
+import React, {useState} from "react"
 import { Route } from "react-router-dom"
 import { FriendList } from "./FriendsList"
 import { EventList } from "./event/Event"
@@ -18,8 +18,10 @@ import { ArticleEditForm } from "./articles/ArticleEditForm"
 import { TaskEdit } from "./task/TaskEdit"
 import { WeatherCard } from "./event/WeatherCard"
 import { EventEditForm } from "./event/EventEditForm"
+import { AddFriendModal } from "./AddNewFriend"
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
+  const [show, setShow] = useState(false)
   return (
     <>
       <Route exact path="/tasks/:taskId(\d+)/edit">
@@ -50,7 +52,8 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
       </Route>
 
       <Route exact path="/messages">
-        <MessageList />
+
+      <MessageList />
       </Route>
 
       <Route exact path="/messages/:messageId(\d+)/edit">

@@ -1,16 +1,13 @@
 import React from "react";
 import "./AddNewFriend.css"
 
-export const AddFriendModal = (props) => {
-    if (!props.show) {
-        return null
-    }
-    
+export const AddFriendModal = ({setShow, message, handleAddFriend}) => {
     return (
-        <div className="modal">
+        <div className="modalbody">
             <div className="modalContent">
-            <h3 className="modalText">user.name</h3>
-                <button className="modalButton">add friend</button>
+            <h3 className="modalText">{message.messenger}</h3>
+                <button className="modalButton"onClick={()=> handleAddFriend(message.userId)}>add friend</button>
+                <button className="modalButton" onClick={()=> setShow(false)}>close</button>
             </div>
         </div>
     )

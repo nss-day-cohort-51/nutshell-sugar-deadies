@@ -38,7 +38,6 @@ export const FriendList = () => {
             userId: userid,
             currentUserId: loguser
         }
-        console.log(userid)
         addFriend(newFriend).then(res =>
             getFriends())
     }

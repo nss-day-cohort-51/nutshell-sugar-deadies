@@ -29,7 +29,7 @@ export const MessageEditForm = () => {
             message: message.message,
             messenger: message.messenger,
             timestamp: message.timestamp,
-            currentUserId: message.currentUserId
+            userId: message.userId
         }
 
         updateMessage(editedMessage)

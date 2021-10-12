@@ -6,7 +6,7 @@ import { useHistory } from "react-router";
 export const MessageCard = ({ message, handleDeleteMessage, showModal }) => {
     const history = useHistory()
     let loggedinuserId = parseInt(sessionStorage.getItem("nutshell_user"))
-    if (message.currentUserId === loggedinuserId) {
+    if (message.userId === loggedinuserId) {
         return (
             <>
                 <section className="message">
@@ -27,7 +27,7 @@ export const MessageCard = ({ message, handleDeleteMessage, showModal }) => {
 
             <section className="message">
                 <h5 className="messengerName">{message.message}</h5>
-                <div>Posted by: <button onClick={() => showModal()}>{message.messenger}</button> </div>
+                <div>Posted by: <button onClick={() => showModal(message)}>{message.messenger}</button> </div>
                 <div>{message.timestamp}</div>
             </section>
 
