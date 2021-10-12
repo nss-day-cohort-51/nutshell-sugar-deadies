@@ -110,7 +110,7 @@ export const MessageList = () => {
                         <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat" size="50" value={message.messages} />
                     </div>
                     <button className="message-save-button"
-                        onClick={handleClickSaveMessage}>
+                        onClick={handleClickSaveNewMessage}>
                         Save
                     </button>
                 </fieldset>
