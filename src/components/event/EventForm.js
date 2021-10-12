@@ -6,8 +6,8 @@ import { addEvent } from '../../modules/EventManager';
 import "./Event.css"
 
 export const EventForm = () => {
-   
-    const [interestingEvent, setEvent] = useState ({
+
+    const [interestingEvent, setEvent] = useState({
         name: "",
         date: "",
         location: ""
@@ -19,7 +19,7 @@ export const EventForm = () => {
     const handleControlledInputChange = (event) => {
         const newEvent = { ...interestingEvent }
         let selectedVal = event.target.value
-        
+
         if (event.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
@@ -29,27 +29,35 @@ export const EventForm = () => {
     const handleClickSaveEvent = (event) => {
         event.preventDefault()
         addEvent(interestingEvent)
-        .then(() => history.push("/events"))
+            .then(() => history.push("/events"))
+    }
+
+    const handleCancelButton = () => {
+        history.push("/events")
     }
 
 
-return (
-    <form className="eventForm">
-        <h2 className="eventForm__title">New Event</h2>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="name">Event Name</label>
-                <input className="eventform" type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="Event name" />
-                <label htmlFor="location">Event Location</label>
-                <input className="eventform" type="text" id="location" onChange={handleControlledInputChange} className="form-control" placeholder="Event Location" />
-                <label htmlFor="date">Event Date</ label>
-                <input className="eventform" type="datetime-local" id="date" onChange={handleControlledInputChange} className="form-control" placeholder="Event Date" />
-            </div>
+    return (
+        <form className="eventForm">
+            <h2 className="eventForm__title">New Event</h2>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="name">Event Name</label>
+                    <input className="eventform" type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="Event name" />
+                    <label htmlFor="location">Event Location</label>
+                    <input className="eventform" type="text" id="location" onChange={handleControlledInputChange} className="form-control" placeholder="Event Location" />
+                    <label htmlFor="date">Event Date</ label>
+                    <input className="eventform" type="datetime-local" id="date" onChange={handleControlledInputChange} className="form-control" placeholder="Event Date" />
+                </div>
             </fieldset>
             <button className="save-event-button"
-				onClick={handleClickSaveEvent}>
-				Save Event
-          </button>
-    </form>
-)
+                onClick={handleClickSaveEvent}>
+                Save Event
+            </button>
+            <button
+                onClick={handleCancelButton} className="save-event-button">
+                Cancel
+            </button>
+        </form>
+    )
 }

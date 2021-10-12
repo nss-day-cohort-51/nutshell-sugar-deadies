@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import "./Login.css"
 
-export const Register = ({setAuthUser}) => {
+export const Register = ({ setAuthUser }) => {
 
     const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "" })
     const [conflictDialog, setConflictDialog] = useState(false)
@@ -86,7 +86,7 @@ export const Register = ({setAuthUser}) => {
                     <button type="submit"> Sign in </button>
                     <button onClick={handleCancel}> Cancel </button>
                 </fieldset>
-               
+
             </form>
         </main>
     )

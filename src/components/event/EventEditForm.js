@@ -6,45 +6,51 @@ import { useParams, useHistory } from "react-router"
 import { updateEvent } from "../../modules/EventManager"
 
 export const EventEditForm = () => {
-    const [event, setEvent] = useState ({ name: "", date:"", location: ""
-    }) 
-    const [isLoading, setIsLoading] = useState(false);
+  const [event, setEvent] = useState({
+    name: "", date: "", location: ""
+  })
+  const [isLoading, setIsLoading] = useState(false);
 
-    const {eventId} = useParams();
-    const history = useHistory();
+  const { eventId } = useParams();
+  const history = useHistory();
 
-    const handleFieldChange = evt => {
-        const stateToChange = { ...event };
-        stateToChange[evt.target.id] = evt.target.value;
-        setEvent(stateToChange);
-    };
+  const handleFieldChange = evt => {
+    const stateToChange = { ...event };
+    stateToChange[evt.target.id] = evt.target.value;
+    setEvent(stateToChange);
+  };
 
-    const updateExistingEvent = evt => {
-        evt.preventDefault()
-        setIsLoading(true);
-    
+  const handleCancel = () => {
+    history.push("/events")
+  }
+
+  const updateExistingEvent = evt => {
+    evt.preventDefault()
+    setIsLoading(true);
+
 
     const editedEvent = {
-        id: eventId,
-        name: event.name,
-        location: event.location,
-        date: event.date,
+      id: eventId,
+      name: event.name,
+      location: event.location,
+      date: event.date,
 
     };
 
     updateEvent(editedEvent)
-    .then(() => history.push("/events")
-    )}
+      .then(() => history.push("/events")
+      )
+  }
 
-    useEffect(() => {
-        getEventById(eventId)
-        .then(event => {
-            setEvent(event);
-            setIsLoading(false)
-        });
-    }, []);
+  useEffect(() => {
+    getEventById(eventId)
+      .then(event => {
+        setEvent(event);
+        setIsLoading(false)
+      });
+  }, []);
 
-return (
+  return (
     <>
       <form>
         <fieldset>
@@ -57,7 +63,7 @@ return (
               id="name"
               value={event.name}
             />
-            <label htmlFor= "name">Event Name</label>
+            <label htmlFor="name">Event Name</label>
 
             <input
               type="datetime-local"
@@ -67,7 +73,7 @@ return (
               id="date"
               value={event.date}
             />
-            <label htmlFor= "name">Event Date</label>
+            <label htmlFor="name">Event Date</label>
 
             <input
               type="text"
@@ -84,6 +90,7 @@ return (
               type="button" disabled={isLoading}
               onClick={updateExistingEvent}
               className="btn btn-primary">Submit</button>
+            <button onClick={handleCancel} className="btn btn-primary"> Cancel </button>
           </div>
         </fieldset>
       </form>

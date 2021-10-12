@@ -21,11 +21,11 @@ export const Nutshell = () => {
     setIsAuthenticated(sessionStorage.getItem("nutshell_user") !== null)
   }
 
-    return (
-      <>
-        <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />
-        <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
-      </>
-    )
+  return (
+    <>
+      <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />
+      <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
+    </>
+  )
 
 }
