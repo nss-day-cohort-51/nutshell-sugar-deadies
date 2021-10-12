@@ -1,3 +1,5 @@
+//Author: Morgan, Purpose: To format the way the weather will show on the DOM
+
 import React, { useEffect, useState } from "react";
 import { getWeather } from "../../modules/EventManager"
 import "./Event.css"

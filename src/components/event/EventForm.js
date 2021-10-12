@@ -1,3 +1,5 @@
+// Author: Morgan, Purpose: To give the user the ability to post a new event
+
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { addEvent } from '../../modules/EventManager';

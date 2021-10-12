@@ -1,3 +1,5 @@
+// Author: Morgan, Purpose: To fetch data from the database
+
 const remoteURL = "http://localhost:8088"
 
 export const getEventById = (eventId) => {

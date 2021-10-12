@@ -1,3 +1,5 @@
+// Author: Morgan, Purpose: To portray the event cards in a list on the DOM
+
 import React, {useState, useEffect} from 'react';
 import { getAllEvents, deleteEvent } from '../../modules/EventManager';
 import { EventCard } from './EventCard';

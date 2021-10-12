@@ -1,3 +1,5 @@
+//Author: Morgan, Purpose: To allow the user to edit an event
+
 import React, { useState, useEffect } from "react"
 import { getEventById } from "../../modules/EventManager"
 import { useParams, useHistory } from "react-router"

@@ -1,3 +1,4 @@
+// Author: Morgan, Purpose: To format the way each event will show on the DOM
 import React from "react";
 import "./Event.css"
 import { Link } from "react-router-dom"
