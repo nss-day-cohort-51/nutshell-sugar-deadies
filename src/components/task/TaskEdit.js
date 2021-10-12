@@ -16,6 +16,10 @@ export const TaskEdit = () => {
         setTask(stateToChange);
     };
 
+    const handleCancelButton = () => {
+        history.push("/tasks")
+    }
+
     const updateCompletedTask = evt => {
         evt.preventDefault()
         setIsLoading(true);

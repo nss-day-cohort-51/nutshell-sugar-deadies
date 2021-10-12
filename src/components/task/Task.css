@@ -7,7 +7,7 @@
     border-radius: 10px;
     border-width: 1px;
     font-size: 20px;
-    transition-duration: 0.4s;  
+    transition-duration: 0.4s;
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
     margin-top: 100px;
@@ -24,7 +24,7 @@
     border-radius: 10px;
     border-width: 1px;
     font-size: 15px;
-    transition-duration: 0.4s;  
+    transition-duration: 0.4s;
     margin-right: 20px;
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
@@ -54,9 +54,6 @@ justify-content: center;
 .task {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
-    
-   
-
 }
 
 input[type=checkbox] {
@@ -96,23 +93,14 @@ input {
  }
 
 
-#completionDate {
-    /* color: lightskyblue; */
-    
-}
-
-.task-name-field {
-    /* color: lightskyblue; */
-}
 
 
 .save-button-task {
-
     width: 150px;
     height: 60px;
     border-style: solid;
     color: black;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
     border-radius: 10px;
     border-width: 1px;
     font-size: 20px;

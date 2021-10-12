@@ -1,4 +1,4 @@
-export const  formatAMPM = (date) => {
+export const formatAMPM = (date) => {
     const oldDate = new Date(Date.now());
     const newDate = oldDate.toDateString();
     let hours = date.getHours();

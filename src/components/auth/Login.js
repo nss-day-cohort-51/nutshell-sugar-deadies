@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import { Link, useHistory } from "react-router-dom";
 import "./Login.css"
 
 
-export const Login = ({setAuthUser}) => {
+export const Login = ({ setAuthUser }) => {
     const [loginUser, setLoginUser] = useState({ email: "" })
     const [existDialog, setExistDialog] = useState(false)
 
