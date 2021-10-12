@@ -50,7 +50,7 @@ export const TaskEdit = () => {
                 <fieldset>
                     <div className="edit-form-container">
                         <div className="formgrid">
-                        <label htmlFor="name">Task</label>
+                            <label htmlFor="name">Task</label>
                             <input
                                 type="text"
                                 required
