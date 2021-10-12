@@ -17,3 +17,6 @@ a.nav-link {
 .logo__img {
     flex: 1;
 }
+a.nav-link:hover {
+    color: lightblue;
+}
