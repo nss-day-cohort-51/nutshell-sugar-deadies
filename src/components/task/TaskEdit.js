@@ -65,6 +65,10 @@ export const TaskEdit = () => {
                             <div>
 
                                 <button className="task-update-button" type="button" onClick={updateCompletedTask}>Update</button>
+                                <button className="task-update-button"
+                                    onClick={handleCancelButton}>
+                                    Cancel
+                                </button>
                             </div>
                         </div>
                         <div className="alignRight">

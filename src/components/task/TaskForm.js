@@ -33,6 +33,10 @@ export const TaskForm = () => {
 		setTask(newTask)
 	}
 
+    const handleCancelButton = () => {
+        history.push("/tasks")
+    }
+
     const handleClickSaveTask = (event) => {
 		event.preventDefault() 
 
@@ -64,6 +68,10 @@ export const TaskForm = () => {
             <button className="save-button-task"
                 onClick={handleClickSaveTask}>
                 Save
+            </button>
+            <button className="save-button-task"
+                onClick={handleCancelButton}>
+                Cancel
             </button>
             </div>
         </form>
