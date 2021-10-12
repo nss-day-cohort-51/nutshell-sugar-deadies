@@ -25,8 +25,8 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
   return (
     <nav className="navbar">
+      <h1 className="beatles-nutshell">The Beatles Nutshell</h1>
       <div className="logo__img"><img className="logo" src={logo} alt="Sugar Deadies"/></div>
-
       <ul className="nav nav-pills nav-fill">
         {isAuthenticated ?
           <li className="nav-item">

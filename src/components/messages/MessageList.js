@@ -59,27 +59,31 @@ export const MessageList = () => {
 
     return (
         <>
-        <div className="message-form-container">
+        <h1>Messages</h1>
+        <div >
             <form >
                 <fieldset className="messageForm">
                     <div>
-                        <label htmlFor="message">Enter New Message: </label>
-                        <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message" size="50" value={message.messages} />
+                        <label htmlFor="message"> </label>
+                        <input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat" size="50" value={message.messages} />
                     </div>
-                    <button
+                    <button className="message-save-button"
                         onClick={handleClickSaveMessage}>
                         Save
                     </button>
                 </fieldset>
             </form>
             </div>
-
-            
+            <h2 className="chat-header">Chat</h2>
+           
 
             <div className="message-cards">
-            <h2>Chat</h2>
+            <hr></hr>
+            
                 {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} />)}
             </div>
+            
+           
         </>
     )
 }

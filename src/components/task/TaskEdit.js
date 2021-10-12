@@ -44,27 +44,30 @@ export const TaskEdit = () => {
         <>
             <form>
                 <fieldset>
-                    <div className="formgrid">
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="name"
-                            value={task.name}
-                        />
+                    <div className="edit-form-container">
+                        <div className="formgrid">
                         <label htmlFor="name">Task</label>
+                            <input
+                                type="text"
+                                required
+                                className="form-control"
+                                onChange={handleFieldChange}
+                                id="name"
+                                value={task.name}
+                            />
+                            <label htmlFor="completionDate">Completion Date</label>
+                            <input
+                                className="taskform" type="datetime-local" id="completionDate" onChange={handleFieldChange} className="form-control" placeholder="completion date" />
+                            <div>
 
-                        <input
-                            className="taskform" type="datetime-local" id="completionDate" onChange={handleFieldChange}className="form-control" placeholder="completion date" />
-                    
-                        <label htmlFor="completionDate">Completion Date</label>
-                    </div>
-                    <div className="alignRight">
-                     
-                    </div>
-                    <div>
-                        <button type="button" onClick={updateCompletedTask}>Update</button>
+                                <button className="task-update-button" type="button" onClick={updateCompletedTask}>Update</button>
+                            </div>
+                        </div>
+                        <div className="alignRight">
+
+                        </div>
+
+
                     </div>
                 </fieldset>
             </form>

@@ -42,6 +42,7 @@ export const TaskForm = () => {
     return (
 
         <form className="taskForm">
+            <div className="create-a-task">
             <h2 className="taskForm__title">Create a new task</h2>
             <fieldset className="taskform-fieldset">
                 <div className="form-group">
@@ -49,6 +50,7 @@ export const TaskForm = () => {
                     <input type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="task name" />
                 </div>
             </fieldset>
+            </div>
 
             <fieldset className="taskform-fieldset">
                 <div className="form-group">
@@ -56,10 +58,12 @@ export const TaskForm = () => {
                     <input type="datetime-local" id="completionDate" onChange={handleControlledInputChange}className="form-control" placeholder="completion date" />
                 </div>
             </fieldset>
+            <div className="save-button-task-move">
             <button className="save-button-task"
                 onClick={handleClickSaveTask}>
-                Save Task
+                Save
             </button>
+            </div>
         </form>
 
     )

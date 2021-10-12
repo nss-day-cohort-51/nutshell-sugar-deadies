@@ -50,33 +50,36 @@ export const ArticleEditForm = () => {
     return (
         <>
             <section className="articleForm">
-            <section>
+                <h1>Edit Article</h1>
+                <div className="art-titles">
+            <section >
                 <h3 className="articleTitle">{article.title} </h3>
                 <div>{article.synopsis}</div>
                 <div><a href={article.url} target="_blank">{article.url}</a></div>
             </section>
+            </div>
 
 
             <form >
-                <fieldset>
-                    <div>
+                <fieldset >
+                    <div className="art-edit-fieldset-1">
                         <label htmlFor="title">Title:</label>
-                        <input type="text" id="title" onChange={handleFieldChange} placeholder="Title" value={article.title} />
+                        <input size="200" type="text" id="title" onChange={handleFieldChange} placeholder="Title" value={article.title} />
                     </div>
 
-                    <div>
+                    <div className="art-edit-fieldset">
                         <label htmlFor="synopsis">Synopsis:</label>
-                        <input type="text" id="synopsis" onChange={handleFieldChange} placeholder="Synopsis" value={article.synopsis} />
+                        <input size="200" type="text" id="synopsis" onChange={handleFieldChange} placeholder="Synopsis" value={article.synopsis} />
                     </div>
 
-                    <div>
+                    <div className="art-edit-fieldset">
                         <label htmlFor="url">URL:</label>
-                        <input type="text" id="url" onChange={handleFieldChange} placeholder="URL" value={article.url} />
+                        <input size="200" type="text" id="url" onChange={handleFieldChange} placeholder="URL" value={article.url} />
                     </div>
 
-                    <div >
-                        <button type="button" disabled={isLoading} onClick={updateExistingArticle}>Update</button>
-                        <button onClick={handleCancel}> Cancel </button>
+                    <div className="art-edit-fieldset-buttons">
+                        <button className="art-edit-update-button" type="button" disabled={isLoading} onClick={updateExistingArticle}>Update</button>
+                        <button className="art-cancel-update-button" onClick={handleCancel}> Cancel </button>
                     </div>
                 </fieldset>
             </form>
