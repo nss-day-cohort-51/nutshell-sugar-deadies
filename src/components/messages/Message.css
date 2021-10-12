@@ -1,5 +1,5 @@
 .messageForm {
-    font-family: "Beatles", sans-serif; 
+    font-family: "Beatles", sans-serif;
     word-spacing: 10px;
     border: 10px solid black;
     margin-top: 20px;
@@ -7,8 +7,8 @@
 }
 
 .message {
-    margin-bottom: 20px; 
-    font-family: "Beatles", sans-serif; 
+    margin-bottom: 20px;
+    font-family: "Beatles", sans-serif;
     word-spacing: 10px;
 }
 
@@ -21,4 +21,3 @@
     display: flex;
     justify-content: center;
 }
-

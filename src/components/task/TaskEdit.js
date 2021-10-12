@@ -16,6 +16,10 @@ export const TaskEdit = () => {
         setTask(stateToChange);
     };
 
+    const handleCancelButton = () => {
+        history.push("/tasks")
+    }
+
     const updateCompletedTask = evt => {
         evt.preventDefault()
         setIsLoading(true);
@@ -56,15 +60,19 @@ export const TaskEdit = () => {
                         <label htmlFor="name">Task</label>
 
                         <input
-                            className="taskform" type="datetime-local" id="completionDate" onChange={handleFieldChange}className="form-control" placeholder="completion date" />
-                    
+                            className="taskform" type="datetime-local" id="completionDate" onChange={handleFieldChange} className="form-control" placeholder="completion date" />
+
                         <label htmlFor="completionDate">Completion Date</label>
                     </div>
                     <div className="alignRight">
-                     
+
                     </div>
                     <div>
                         <button type="button" onClick={updateCompletedTask} disabled={isLoading}>Update</button>
+                        <button
+                            onClick={handleCancelButton}>
+                            Cancel
+                        </button>
                     </div>
                 </fieldset>
             </form>

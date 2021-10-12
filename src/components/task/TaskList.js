@@ -36,13 +36,13 @@ export const TaskList = () => {
     return (
 
         <>
-            
+
 
             <section className="section-content">
 
 
                 <section>
-                <h1>Tasks</h1>
+                    <h1>Tasks</h1>
                     <div className="taskbutton">
                         <button className="taskcreate-button" onClick={() => history.push("/tasks/create")}>Create a Task</button>
                     </div>
@@ -55,7 +55,7 @@ export const TaskList = () => {
                     <TaskCard reload={reload}
                         key={task.id}
                         task={task} handleDeleteTask={handleDeleteTask} />)}
-                        
+
             </div>
         </>
     );

@@ -10,11 +10,13 @@
     justify-content: center;
     overflow: auto;
 }
+
 .modalContent {
     width: 500px;
     background-color: white;
     padding: 10px;
 }
+
 body .modal-backdrop.fade.in {
     z-index: 0 !important;
 }

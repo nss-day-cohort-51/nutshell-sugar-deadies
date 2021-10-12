@@ -3,15 +3,14 @@
     height: 60px;
     border-style: solid;
     color: black;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
     border-radius: 10px;
     border-width: 1px;
     font-size: 20px;
-    transition-duration: 0.4s;  
+    transition-duration: 0.4s;
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
     margin-top: 100px;
-
 }
 
 .task-delete-edit {
@@ -19,16 +18,15 @@
     height: 35px;
     border-style: solid;
     color: black;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
     border-radius: 10px;
     border-width: 1px;
     font-size: 15px;
-    transition-duration: 0.4s;  
+    transition-duration: 0.4s;
     margin-right: 20px;
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
     margin-top: 20px;
-
 }
 
 .task-posts {
@@ -37,21 +35,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    
 }
 
 .taskbutton {
-margin-left: 130px;
-    
-    
+    margin-left: 130px;
 }
 
 .task {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
-    
-   
-
 }
 
 .checkbox {
@@ -61,49 +53,42 @@ margin-left: 130px;
 .form-group {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
-    
 }
 
 .taskform-fieldset {
-    
     /* width: 500px; */
     /* display: flex;
     flex-direction: column;
     align-items: center; */
     display: block;
-  /* width: 100%; */
-  overflow: hidden;
-  resize: both;
-  min-height: 40px;
-  line-height: 20px;
-    
-    
+    /* width: 100%; */
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
 }
+
 #completionDate {
     color: lightskyblue;
-    
 }
 
 .task-name-field {
     color: lightskyblue;
 }
 
-
 .save-button-task {
-
     width: 150px;
     height: 60px;
     border-style: solid;
     color: black;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
     border-radius: 10px;
     border-width: 1px;
     font-size: 15px;
-    transition-duration: 0.4s;  
+    transition-duration: 0.4s;
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
     margin-top: 100px;
-
 }
 
 .checkLabel {

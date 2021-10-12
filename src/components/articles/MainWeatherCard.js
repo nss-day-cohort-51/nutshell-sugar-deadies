@@ -23,7 +23,7 @@ export const CurrentWeatherCard = () => {
                     <span>Temp: {Math.round(weather.main.temp)}</span>
                     <p>{weather.weather[0].description}</p>
                     <div className="icon">
-                    <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
+                        <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
                     </div>
                 </>
             }

@@ -40,7 +40,7 @@ export const ArticleList = () => {
                 </section>
 
                 <div className="artTitle">
-                <h1>Articles</h1>
+                    <h1>Articles</h1>
                     <div className="art-button-move">
                         <button className="articleButton" type="button"
                             onClick={() => { history.push("/create") }}>
@@ -48,7 +48,7 @@ export const ArticleList = () => {
                         </button>
                     </div>
                 </div>
- 
+
                 <section className="articles">
                     <div className="article-cards">
                         {articles.map(article => <ArticleCard article={article} key={article.id} handleDeleteArticle={handleDeleteArticle} />)}
