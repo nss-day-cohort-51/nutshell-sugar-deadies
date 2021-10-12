@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import { useHistory } from "react-router"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./NavBar.css"
+import logo from "../../images/logo.png"
 
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
@@ -24,6 +25,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
   return (
     <nav className="navbar">
+      <div className="logo__img"><img className="logo" src={logo} alt="Sugar Deadies"/></div>
 
       <ul className="nav nav-pills nav-fill">
         {isAuthenticated ?
