@@ -44,30 +44,33 @@ export const ArticleForm = () => {
     return (
 
         <form className="articleForm">
+            <h1>Add an Article</h1>
             <fieldset>
-                <div>
+                <div className="art-title-form-top">
                     <label htmlFor="title">Title:</label>
-                    <input type="text" id="title" onChange={handleControlleInputChange} placeholder="Title" value={article.title} />
+                    <input size="100" type="text" id="title" onChange={handleControlleInputChange} placeholder="Title" value={article.title} />
                 </div>
 
-                <div>
+                <div className="art-title-form">
                     <label htmlFor="synopsis">Synopsis:</label>
-                    <input type="text" id="synopsis" onChange={handleControlleInputChange} placeholder="Synopsis" value={article.synopsis} />
+                    <input size="100" type="text" id="synopsis" onChange={handleControlleInputChange} placeholder="Synopsis" value={article.synopsis} />
                 </div>
 
-                <div>
+                <div className="art-title-form">
                     <label htmlFor="url">URL:</label>
-                    <input type="text" id="url" onChange={handleControlleInputChange} placeholder="URL" value={article.url} />
+                    <input size="100" type="text" id="url" onChange={handleControlleInputChange} placeholder="URL" value={article.url} />
                 </div>
             </fieldset>
-            <button
+            <div className="art-buttons-containter">
+            <button className="art-save-button"
                 onClick={handleClickSaveArticle}>
                 Save
             </button>
-            <button
+            <button className="art-cancel-button"
                 onClick={handleCancelButton}>
                 Cancel
             </button>
+            </div>
         </form>
     )
 }

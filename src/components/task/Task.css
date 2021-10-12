@@ -2,8 +2,8 @@
     width: 200px;
     height: 60px;
     border-style: solid;
-    color: black;
-    background-color: lightskyblue;
+    color:black;
+    background-color:lightskyblue;
     border-radius: 10px;
     border-width: 1px;
     font-size: 20px;
@@ -11,14 +11,16 @@
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
     margin-top: 100px;
+    
+
 }
 
 .task-delete-edit {
     width: 100px;
     height: 35px;
     border-style: solid;
-    color: black;
-    background-color: lightskyblue;
+    color:black;
+    background-color:lightskyblue;
     border-radius: 10px;
     border-width: 1px;
     font-size: 15px;
@@ -26,7 +28,8 @@
     margin-right: 20px;
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
-    margin-top: 20px;
+   
+
 }
 
 .task-posts {
@@ -35,15 +38,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    
+    
+    
 }
 
 .taskbutton {
-    margin-left: 130px;
+display: flex;
+justify-content: center;
+
+    
+    
 }
 
 .task {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
+}
+
+input[type=checkbox] {
+    transform: scale(2.5);
 }
 
 .checkbox {
@@ -53,28 +67,33 @@
 .form-group {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
+  
 }
 
 .taskform-fieldset {
-    /* width: 500px; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    display: block;
-    /* width: 100%; */
-    overflow: hidden;
-    resize: both;
-    min-height: 40px;
-    line-height: 20px;
+    
+
+    
+    padding:15px 400px;
+    line-height:140%;
+    
 }
 
-#completionDate {
-    color: lightskyblue;
+input[type="text"] {
+    
+    display: inline-block;
+    padding: 50px 10px; line-height: 28px;
+    
 }
 
-.task-name-field {
-    color: lightskyblue;
-}
+input {
+    padding-top: 0;
+    padding-left: 0;
+    line-height: 1em;
+ }
+
+
+
 
 .save-button-task {
     width: 150px;
@@ -84,13 +103,58 @@
     background-color: lightskyblue;
     border-radius: 10px;
     border-width: 1px;
-    font-size: 15px;
-    transition-duration: 0.4s;
+    font-size: 20px;
+    transition-duration: 0.4s;  
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
-    margin-top: 100px;
+    
+
+}
+
+.save-button-task-move {
+    display: flex;
+    justify-content: center;
 }
 
 .checkLabel {
-    padding-left: 10px;
+    padding-left: 20px;
+}
+
+.taskForm__title {
+    margin-top: 20px;
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.formgrid {
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    
+}
+.edit-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.task-update-button {
+    width: 100px;
+    height: 50px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 17px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    margin-top: 20px;
 }

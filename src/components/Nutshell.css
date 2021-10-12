@@ -3,7 +3,8 @@ strong {
 }
 
 html {
-  margin: 0
+ margin: 0
+
 }
 
 label {
@@ -13,19 +14,23 @@ label {
 input {
   margin-bottom: 10px;
   word-spacing: 3px;
+  
 }
 
 button {
   margin-right: 10px;
+
 }
 
 button:hover {
-  background-color: lightsteelblue;
+  background-color:lightsteelblue;
   transition-duration: 0.25s;
 }
 
 h1 {
+
   font-family: "Beatles", sans-serif;
-  word-spacing: 10px;
-  margin-top: 10px;
+    word-spacing: 10px;
+    margin-top: 10px;
 }
+

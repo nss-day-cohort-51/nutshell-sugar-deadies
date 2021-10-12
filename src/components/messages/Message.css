@@ -1,23 +1,167 @@
 .messageForm {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
-    border: 10px solid black;
+    border: 5px solid black;
+    border-style:ridge;
     margin-top: 20px;
+    background-color: lightskyblue;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
     width: fit-content;
+    margin-left: 735px;
+    padding-top: 20px;
 }
 
 .message {
     margin-bottom: 20px;
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
+    
 }
 
 .message-cards {
     font-family: "Beatles", sans-serif;
     word-spacing: 10px;
+    margin-left: 20px;
+    
+
 }
 
+.message-edit-form {
+ 
+  display: flex;
+  justify-content: center;
+    
+
+}
+
+.update-message-header {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.message-edit-details {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.message-edit-details-2 {
+    display: flex;
+    justify-content: center;
+    
+}
+.message-edit-details-3 {
+    display: flex;
+    justify-content: center;
+   
+}
 .message-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.message-save-button {
+    width: 100px;
+    height: 40px;
+    border-style: solid;
+    color: black;
+    background-color:white;
+    margin-bottom: 10px;
+    margin-left: 295px;
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+
+}
+
+.chat-header {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+}
+
+.message-delete-button {
+    width: 100px;
+    height: 40px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    margin-bottom: 10px;
+    
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+.message-edit-button {
+    width: 100px;
+    height: 40px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    margin-bottom: 10px;
+    
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+.message-update-buttons {
+
+    padding-top: 20px;
+}
+
+.message-update-button {
+
+    width: 100px;
+    height: 35px;
+    border-style: solid;
+    color:black;
+    background-color:lightskyblue;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    margin-right: 20px;
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+}
+
+.message-cancel-button {
+
+    width: 100px;
+    height: 35px;
+    border-style: solid;
+    color:black;
+    background-color:lightskyblue;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    margin-right: 20px;
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+}
+
+.message-buttons-container {
     display: flex;
     justify-content: center;
 }

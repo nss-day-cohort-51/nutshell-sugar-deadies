@@ -15,13 +15,23 @@ a.nav-link {
 }
 
 .logo__img {
-    flex: 1;
+
+    margin-right: 250px;
+    
+
+
+    
 }
 
 a.nav-link:hover {
     color: lightblue;
 }
 
+.beatles-nutshell {
+    color: white;
+    
+    margin-right: 350px;
+}
 .intro {
     font-family: "Beatles", sans-serif;
     color: white;

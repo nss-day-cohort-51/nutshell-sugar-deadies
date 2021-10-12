@@ -47,21 +47,28 @@ export const MessageEditForm = () => {
 
     return (
         <>
+        
             <section className="message">
-                <h5 className="messengerName">{message.message}</h5>
-                <div>Posted by: {message.messenger}</div>
-                <div>{message.timestamp}</div>
+                <h1>Edit Message</h1>
+                <div className="message-edit-details-container">
+            <div className="message-edit-details">
+                <h5 className="messengerName">{message.message}</h5></div>
+                <div className="message-edit-details-2">Posted by: {message.messenger}</div>
+                <div className="message-edit-details-3">{message.timestamp}</div>
+                </div>
             </section>
 
             <form className="message">
-                <fieldset>
-                    <label htmlFor="message">Update Message:</label>
-                    <input type="text" id="message" onChange={handleFieldChange} disabled={isLoading} placeholder="Enter New Message" size="20" value={message.message} />
+
+            <label className="update-message-header" htmlFor="message">Update Message:</label>
+                <fieldset className="message-edit-form">
+                    
+                    <input type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" size= "100" value={message.message} />
                 </fieldset>
 
-                <div >
-                    <button type="button" disabled={isLoading} onClick={updateExistingMessage}>Update</button>
-                    <button onClick={handleCancel}> Cancel </button>
+                <div className="message-buttons-container">
+                    <button className="message-update-button" type="button" disabled={isLoading} onClick={updateExistingMessage}>Update</button>
+                    <button className="message-cancel-button" onClick={handleCancel}> Cancel </button>
                 </div>
             </form>
         </>

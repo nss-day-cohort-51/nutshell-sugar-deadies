@@ -59,6 +59,104 @@ h1 {
   word-spacing: 10px;
   margin-top: 20px;
 }
+.art-edit-fieldset-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+
+.art-edit-fieldset {
+  display: flex;
+  justify-content: center;
+
+  
+}
+.art-titles {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.art-title-form-top {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+.art-buttons-containter {
+display: flex;
+justify-content: center;
+}
+.art-edit-fieldset-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.art-cancel-update-button {
+  width: 150px;
+    height: 60px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 20px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    
+}
+.art-edit-update-button {
+  width: 150px;
+    height: 60px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 20px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+}
+
+.art-cancel-button {
+  width: 150px;
+    height: 60px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 20px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+}
+
+.art-save-button {
+
+  width: 150px;
+    height: 60px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 20px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+}
+
+
+
+.art-title-form {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 article {
   margin-left: 20px;
@@ -69,6 +167,7 @@ article {
   font-size: x-small;
   margin-top: 20px;
   margin-left: 10px;
+  margin-right: 160px;
   flex-direction: row;
   justify-content: flex-end;
   /* background-color: lightskyblue;

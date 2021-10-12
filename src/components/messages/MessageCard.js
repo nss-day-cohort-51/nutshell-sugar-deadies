@@ -10,14 +10,17 @@ export const MessageCard = ({ message, handleDeleteMessage, showModal }) => {
         return (
             <>
                 <section className="message">
+                <hr></hr>
                     <h5 className="messengerName">{message.message}</h5>
                     <div>Posted by: <a>{message.messenger}</a></div>
                     <div>{message.timestamp}</div>
-                    <button onClick={() => handleDeleteMessage(message.id)}>Delete</button>
-                    <button type="button"
+                    <div className="message-update-buttons">
+                    <button className="message-delete-button" onClick={() => handleDeleteMessage(message.id)}>Delete</button>
+                    <button className="message-edit-button" type="button"
                         onClick={() => history.push(`/messages/${message.id}/edit`)}>
                         Edit
                     </button>
+                    </div>
                     <hr></hr>
                 </section>
 
@@ -25,12 +28,13 @@ export const MessageCard = ({ message, handleDeleteMessage, showModal }) => {
         )
     } else {
         return (
-
+            
             <section className="message">
                 <h5 className="messengerName">{message.message}</h5>
                 <div>Posted by: <button onClick={() => showModal(message)}>{message.messenger}</button> </div>
                 <div>{message.timestamp}</div>
             </section>
+            
 
 
         )
