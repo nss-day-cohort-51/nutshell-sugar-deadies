@@ -1,6 +1,6 @@
 # Beatles Nutshell
 
-![Beatles Animation] (https://media.giphy.com/media/ITuFb81NvO0XS/giphy.gif)
+![Beatles Animation]( https://media.giphy.com/media/ITuFb81NvO0XS/giphy.gif)
 
 **Beatles Nutshell** is an app designed for Beatles Fans to organize their daily tasks, interesting events, news article, friends, and chat messages. 
 
@@ -29,17 +29,17 @@ Please visit us on LinkedIn to ask any questions you may have about our app.
 
 ### Project ERD Diagram
 
-![Project ERD](./images/erd.png)
+![Project ERD](/erd.png)
 
 
 ### Wireframe
 
-![Articles Wireframe](./images/article.png)
-![Article Form Wireframe](./images/articlesform.png)
-![Friends Wireframe](./images/friends.png)
-![Messages Wireframe](./images/messages.png)
-![Message Form Wireframe](./images/messageform.png)
-![Tasks Wireframe](./images/task.png)
-![Task Form Wireframe](./images/taskform.png)
-![Events Wireframe](./images/event.png)
-![Event Form Wireframe](./images/eventform.png)
+![Articles Wireframe](/article.png)
+![Article Form Wireframe](/articlesform.png)
+![Friends Wireframe](/friends.png)
+![Messages Wireframe](/messages.png)
+![Message Form Wireframe](/messageform.png)
+![Tasks Wireframe](/task.png)
+![Task Form Wireframe](/taskform.png)
+![Events Wireframe](/event.png)
+![Event Form Wireframe](/eventform.png)
