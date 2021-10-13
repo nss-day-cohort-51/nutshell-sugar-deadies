@@ -30,6 +30,10 @@ export const WeatherCard = () => {
 
     return (
         <>
+            <button className="weather-cancel-button"
+                onClick={handleCancelButton}>
+                Go Back
+            </button>
             <section className="weather">
                 <h3>Weather</h3>
                 {weather.main &&
@@ -44,10 +48,6 @@ export const WeatherCard = () => {
                 }
 
             </section>
-            <button
-                onClick={handleCancelButton}>
-                Go Back
-            </button>
         </>
     )
 }
