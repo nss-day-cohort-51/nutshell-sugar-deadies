@@ -31,7 +31,7 @@ export const MessageCard = ({ message, handleDeleteMessage, showModal }) => {
             
             <section className="message">
                 <h5 className="messengerName">{message.message}</h5>
-                <div>Posted by: <button onClick={() => showModal(message)}>{message.messenger}</button> </div>
+                <div>Posted by: <button className="posted-by-button" onClick={() => showModal(message)}>{message.messenger}</button> </div>
                 <div>{message.timestamp}</div>
             </section>
             

@@ -29,6 +29,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
 
       <nav className="navbar">
+        <h1 className="beatles-nutshell-title">The Beatles Nutshell</h1>
         <div className="logo__img"><img className="logo" src={logo} alt="Sugar Deadies" /></div>
 
         <ul className="nav nav-pills nav-fill">

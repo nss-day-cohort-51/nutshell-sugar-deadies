@@ -37,10 +37,16 @@ export const FriendList = () => {
 
     return (
         <>
-            <h3>FRIENDS</h3>
+            <div className="friend-list-text">
+            <h1 className="friends-title-text">FRIENDS</h1>
+            <hr></hr>
+            <div className="friend-object-display">
             {friends.filter(friend => friend.currentUserId === loguser).map(friend =>
-                <FriendCard friend={friend} key={friend.id} handleRemoveFriend={handleRemoveFriend} />)
+                <FriendCard friend={friend} key={friend.id} handleRemoveFriend={handleRemoveFriend}  />)
             }
+            </div>
+            <hr></hr>
+            </div>
         </>
     )
 }

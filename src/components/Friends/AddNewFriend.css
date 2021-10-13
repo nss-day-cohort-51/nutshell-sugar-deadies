@@ -15,8 +15,69 @@
     width: 500px;
     background-color: white;
     padding: 10px;
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    display: flex;
+    justify-content: center;
+
 }
 
 body .modal-backdrop.fade.in {
     z-index: 0 !important;
+}
+
+.modalButton {
+    width: 200px;
+    height: 40px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    margin-bottom: 10px;
+    
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+
+}
+
+.friend-list-text {
+    font-family: "Beatles", sans-serif;
+  word-spacing: 10px;
+
+}
+
+.friend-object-display {
+    display: flex;
+    justify-content: center;
+    
+}
+
+h3 {
+    margin-left: 20px;
+
+}
+
+.remove-friend-button {
+
+    width: 200px;
+    height: 40px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.friends-title-text {
+    display: flex;
+    justify-content: center;
 }
