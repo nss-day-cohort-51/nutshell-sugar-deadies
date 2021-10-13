@@ -39,17 +39,30 @@ export const EventForm = () => {
 
     return (
         <form className="eventForm">
-            <h2 className="eventForm__title">New Event</h2>
-            <fieldset>
+            <div className="create-a-event">
+            <h2 className="eventForm__title">Add a new event</h2>
+            <fieldset className="eventform-fieldset">
                 <div className="form-group">
                     <label htmlFor="name">Event Name</label>
                     <input className="eventform" type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="Event name" />
-                    <label htmlFor="location">Event Location</label>
+                    </div>
+            </fieldset>
+            </div>
+          
+           <fieldset className="eventform-fieldset">
+                <div className="form-group">
+            <label htmlFor="location">Event Location</label>
                     <input className="eventform" type="text" id="location" onChange={handleControlledInputChange} className="form-control" placeholder="Event Location" />
+                   </div>
+                    </fieldset>
+
+                <fieldset className="eventform-fieldset">
+                <div className="form-group">
                     <label htmlFor="date">Event Date</ label>
                     <input className="eventform" type="datetime-local" id="date" onChange={handleControlledInputChange} className="form-control" placeholder="Event Date" />
-                </div>
-            </fieldset>
+                    </div>
+                    </fieldset>
+                    <div className="save-button-task-move">
             <button className="save-event-button"
                 onClick={handleClickSaveEvent}>
                 Save Event
@@ -58,6 +71,7 @@ export const EventForm = () => {
                 onClick={handleCancelButton} className="save-event-button">
                 Cancel
             </button>
+            </div>
         </form>
     )
 }

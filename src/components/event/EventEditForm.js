@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import { getEventById } from "../../modules/EventManager"
 import { useParams, useHistory } from "react-router"
 import { updateEvent } from "../../modules/EventManager"
+import "./Event.css"
 
 export const EventEditForm = () => {
   const [event, setEvent] = useState({
@@ -54,43 +55,46 @@ export const EventEditForm = () => {
     <>
       <form>
         <fieldset>
-          <div className="eventEditForm">
-            <input
-              type="text"
-              required
-              className="form-control"
-              onChange={handleFieldChange}
-              id="name"
-              value={event.name}
-            />
-            <label htmlFor="name">Event Name</label>
-
-            <input
-              type="datetime-local"
-              required
-              className="form-control"
-              onChange={handleFieldChange}
-              id="date"
-              value={event.date}
-            />
-            <label htmlFor="name">Event Date</label>
-
-            <input
-              type="text"
-              required
-              className="form-control"
-              onChange={handleFieldChange}
-              id="location"
-              value={event.location}
-            />
-            <label htmlFor="location">Location</label>
-          </div>
-          <div className="alignRight">
-            <button
-              type="button" disabled={isLoading}
-              onClick={updateExistingEvent}
-              className="btn btn-primary">Submit</button>
-            <button onClick={handleCancel} className="btn btn-primary"> Cancel </button>
+          <div className="edit-form-container">
+            <div className="formgrid">
+              <label htmlFor="name">Event Name</label>
+              <input
+                type="text"
+                required
+                className="form-control"
+                onChange={handleFieldChange}
+                id="name"
+                value={event.name}
+              />
+              <label htmlFor="name">Event Name</label>
+              <input
+                type="datetime-local"
+                required
+                className="form-control"
+                onChange={handleFieldChange}
+                id="date"
+                value={event.date}
+              />
+              <label htmlFor="name">Event Date</label>
+              <input
+                type="text"
+                required
+                className="form-control"
+                onChange={handleFieldChange}
+                id="location"
+                value={event.location}
+              />
+              <label htmlFor="location">Location</label>
+            </div>
+            
+              
+              <button
+                type="button" disabled={isLoading}
+                onClick={updateExistingEvent}
+                className="event-update-button">Submit</button>
+              <button onClick={handleCancel} className="event-cancel-button"> Cancel </button>
+            <div className="alignRight">
+            </div>
           </div>
         </fieldset>
       </form>
