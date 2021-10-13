@@ -16,11 +16,15 @@ a.nav-link {
 
 .logo__img {
 
-    margin-right: 250px;
+    margin-right: 350px;
     
 
 
     
+}
+
+.beatles-nutshell-title {
+    color: white;
 }
 
 a.nav-link:hover {

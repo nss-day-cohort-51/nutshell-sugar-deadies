@@ -46,10 +46,10 @@ export const Login = ({ setAuthUser }) => {
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nutshell</h1>
+                    
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label htmlFor="inputEmail"></label>
                         <input type="email"
                             id="email"
                             className="form-control"
@@ -59,15 +59,19 @@ export const Login = ({ setAuthUser }) => {
                             onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button className="sign-in-button" type="submit">
                             Sign in
                         </button>
+                        <section className="link--register">
+                <h6>not signed up?</h6>
+                <div className="register">
+                <Link to="/register">Register for an account here</Link>
+                </div>
+            </section>
                     </fieldset>
                 </form>
             </section>
-            <section className="link--register">
-                <Link to="/register">Register for an account</Link>
-            </section>
+           
         </main>
     )
 }
