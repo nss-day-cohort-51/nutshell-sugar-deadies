@@ -28,6 +28,10 @@
 
 }
 
+.chat {
+    margin-right: 1750px;
+}
+
 .message-edit-form {
  
   display: flex;

@@ -1,3 +1,5 @@
+// Author: Jake, Purpose: To portray the task cards in a list on the DOM
+
 import React, { useEffect, useState } from "react";
 import { getAllTasks } from "../../modules/TaskManager";
 import { TaskCard } from "./TaskCard";
