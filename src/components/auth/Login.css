@@ -12,24 +12,7 @@
  
 }
 
-fieldset {
-  width: 500px;
-}
 
-h2 {
-  margin-left: 150px;
-}
-
-/* .link--register {
-  display: flex;
-  justify-content: center;
-  
-} */
-h6 {
-  display: flex;
-  justify-content: center;
-
-}
 .register {
   display: flex;
   justify-content: center;
