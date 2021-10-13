@@ -12,7 +12,7 @@ export const TaskForm = () => {
     const [task, setTask] = useState({
 		name: "",
 		completionDate: "",
-        status:false,
+        status: false,
         userId: sessionStorage.getItem("nutshell_user"),
 		
 	});
