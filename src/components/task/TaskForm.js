@@ -1,3 +1,5 @@
+// Author: Jake, Purpose: To give the user the ability to post a new article
+
 import React from "react"
 import { useState } from "react";
 import { useHistory } from "react-router";

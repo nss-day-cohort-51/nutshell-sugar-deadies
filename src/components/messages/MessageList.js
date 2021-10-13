@@ -116,9 +116,10 @@ export const MessageList = () => {
                             Save
                         </button>
                     </fieldset>
+                    <h1 className="chat">Chat</h1>
                 </form>
             </div>
-            <h1>Chat</h1>
+           
             {
                 show ? <AddFriendModal show={show} setShow={setShow} message={targetUser} handleAddFriend={handleAddFriend} /> : ""
             }
@@ -127,7 +128,7 @@ export const MessageList = () => {
 
                 {messages.map(message => <MessageCard handleDeleteMessage={handleDeleteMessage} key={message.id} message={message} showModal={showModal}/>)}
             </div>
-
+            
 
         </>
     )

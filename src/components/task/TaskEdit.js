@@ -1,3 +1,5 @@
+//Author: Jake, Purpose: To allow the user to edit an task
+
 import React, { useState, useEffect } from "react"
 import { getTaskById, updateTask } from "../../modules/TaskManager"
 import { useParams, useHistory } from "react-router"
