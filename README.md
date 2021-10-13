@@ -22,7 +22,7 @@ After cloning the repository,`cd` into the `api` directory and enter the followi
 
 Please visit us on LinkedIn to ask any questions you may have about our app.
 
- - [Matt French](https://www.linkedin.com/in/matt-france-4338a058/)
+ - [Matt France](https://www.linkedin.com/in/matt-france-4338a058/)
  - [Jake Lashenik](https://www.linkedin.com/in/jake-lashenik/)
  - [Isaiah Tapolcsanyi]()
  - [Morgan Massey](https://www.linkedin.com/in/morgan-massey-a3b44221a/)
