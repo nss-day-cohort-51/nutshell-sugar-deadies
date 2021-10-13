@@ -30,7 +30,8 @@ export const TaskEdit = () => {
         const editedTask = {
             id: taskId,
             name: task.name,
-            completionDate: task.completionDate
+            completionDate: task.completionDate,
+            status: task.status
         };
 
         updateTask(editedTask)
